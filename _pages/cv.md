@@ -57,7 +57,7 @@ Research experience
   * Developed Bash automation scripts for 300+ sequencing samples, cutting preprocessing time by 20%.  
   * Benchmarked 5+ genomics tools and proposed workflow optimizations.
 
-Skills
+Skills 
 ======
 * **Machine Learning & AI:** Deep Learning (PyTorch, TensorFlow, Keras), Classical ML (Scikit-learn), Computer Vision, Multimodal Learning  
 * **Data Science & Engineering:** Python (NumPy, Pandas, Flask), R, SQL (Postgres), C++, Bash, HPC Systems  
