@@ -1,48 +1,76 @@
 ---
-permalink: /
-title: "About Me"
+layout: single
+title: "About"
+permalink: /about/
 author_profile: true
-sidebar:
-    image: C:/Users/fulbe/fbk_nature/fulbelin.github.io/_pages/profile_photo.png
-    image_alt: Photo of the site author
-redirect_from: 
-  - /about/
-  - /about.html
 ---
 
-I’m Ful Belin Korukoglu, a Master’s student in Bioinformatics at Saarland University and a Research Assistant at the Interdisciplinary Institute for Societal Computing ([I2SC](https://www.i2sc.net/)).
-My work lies at the intersection of artificial intelligence, large-scale systems, and computational biology where I design intelligent, scalable pipelines that bridge scientific discovery with real-world impact.
+# About Me
 
-With hands-on experience in Python, R, SQL, C++, and JavaScript, and a strong foundation in machine learning, high-performance computing, and data architecture, I specialize in building end-to-end systems that are both computationally efficient and ethically grounded.
-My broader goal is to engineer technologies that not only advance biomedical and societal research but also reinforce fairness, reproducibility, and transparency in AI.
+I see myself as a bioinformatics researcher passionate about building **scalable, interpretable, and ethically aligned machine learning systems** that bridge health, computation, and social impact.  
 
-What I’m Working On
-======
-At the Interdisciplinary Institute for Societal Computing, I am developing a scalable geo-intelligence platform that integrates Google Maps data with complementary geospatial sources for large-scale regional analysis.
-The system enables dynamic insights such as live traffic trends, population movement, and user behavior across geographic boundaries. This is achieved by combining PostgreSQL/PostGIS, Redis, and asynchronous microservices for high-throughput data ingestion and analysis.
+I’m currently pursuing an **M.Sc. in Bioinformatics** at [Saarland University](https://www.uni-saarland.de/),  
+where I combine machine learning, data engineering, and computational biology to explore how intelligent systems can advance both research and society.
 
+---
 
-Selected Previous Work
-======
-Medical Imaging Reconstruction (Harvard Medical School)
-Designed and optimized convolutional neural networks (CNNs) for parallel imaging reconstruction, improving signal-to-noise ratio and reconstruction speed.
+## Research & Engineering
 
-Sepsis Mortality Prediction (University of Southern California)
-Developed ensemble models using Random Forests, Gradient Boosting, and k-Nearest Neighbors to predict sepsis outcomes from clinical time-series data.
+At the [Interdisciplinary Institute for Societal Computing (I2SC)](https://www.i2sc.net/),  
+I work as a **Research Assistant**, contributing to the development of a scalable geo-intelligence platform that integrates Google Maps data, spatial analytics, and distributed pipelines.  
 
-Global AI Ethics Atlas (Emory University)
-Built an interactive global visualization platform that maps medical AI ethics guidelines across countries, integrating NLP and geospatial data visualization in React.
+The system processes shapefiles, traffic data, user reviews, and live busyness trends to generate **dynamic urban insights** for crisis monitoring and regional planning.
 
-Genomic Reproducibility Benchmark (ETH Zürich)
-Automated genomic workflows with Snakemake on HPC clusters to assess reproducibility of read alignment tools, improving consistency and transparency in bioinformatics analysis.
+---
 
-AI Safety & Community
-======
-Alongside my research, I lead Marketing and Outreach at [AI Safety Saarland (AISS)](https://www.ais-saarland.org/), a student-led initiative promoting safe, fair, and beneficial AI development.
-I coordinate cross-channel campaigns, oversee event communications, and collaborate with researchers and mentors worldwide to grow an interdisciplinary community around AI safety.
+## Previous Experience
 
-Before that, I worked as a Marketing Specialist at Thread In Motion, where I led data-driven campaigns across Google Ads, LinkedIn, and Meta, integrated HubSpot automations, and deployed machine learning analytics pipelines to improve user acquisition and retention.
+I’ve contributed to interdisciplinary research and product development across institutions such as **ETH Zürich, Harvard Medical School, USC, Brown, and Emory University**.
 
-In Short
-======
-I care deeply about building systems that matter aka scalable infrastructures that accelerate research, advance healthcare, and make technology more responsible. My goal is creating tools that empower both researchers and society at large.
+- **Emory University** – built an interactive global map of *medical AI ethics guidelines* using React and Python  
+- **Harvard Medical School** – designed *CNN models* for parallel medical image reconstruction  
+- **ETH Zürich** – developed reproducible *Snakemake genomic workflows* for DNA alignment benchmarking  
+- **USC** – applied ensemble ML models for *sepsis mortality prediction*  
+- **Thread In Motion** – integrated analytics pipelines with Hotjar, HubSpot, and GA to optimize marketing  
+- **Samsung Innovation Campus** – top 2.3% nationwide with an *AI tool for crop yield optimization*  
+- **Sabancı University** – identified *brain-specific endothelial proteins* via transcriptomic analysis  
+
+---
+
+## Leadership & Outreach
+
+I lead **Marketing and Outreach** at [AI Safety Saarland (AISS)](https://www.ais-saarland.org/) —  
+a student-driven initiative promoting responsible AI development through fellowships, incubators, and interdisciplinary events.  
+
+My role combines **branding, strategy, and university collaboration** to grow one of Germany’s most active AI-safety communities.
+
+---
+
+## Technical Focus
+
+- **Languages:** Python · R · C++ · SQL · JavaScript  
+- **Frameworks:** PyTorch · TensorFlow · FastAPI · Celery · Kafka · PostGIS · TimescaleDB · React  
+- **Core Areas:** Deep Learning · Computational Genomics · Geospatial Analytics · HPC Workflows · System Design  
+- **Philosophy:** Engineering for interpretability, reproducibility, and social responsibility  
+
+---
+
+## Vision & Aspirations
+
+My long-term goal is to contribute to frontier research environments and **advance AI for Science** through generalizable, safe, and transparent models.
+
+I’m particularly interested in:
+
+- **AI for Science & Health** — learning representations that reveal biological structure  
+- **Multimodal Learning & Bias Mitigation** — ensuring models reason equitably across data types  
+- **Safe & Transparent AI Systems** — building architectures aligned with human values  
+
+---
+
+## Beyond Research
+
+Outside academia, I explore **creative technology, storytelling, and photography**.  
+I believe the next generation of AI leaders must think like scientists, design like engineers, and communicate like artists.
+
+---
+
