@@ -2,7 +2,7 @@
 ---
 layout: single
 title: "Home"
-permalink: /
+permalink: /index/
 author_profile: true
 classes: wide
 ---

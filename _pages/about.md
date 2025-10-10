@@ -2,9 +2,6 @@
 layout: single
 title: "About"
 permalink: /about/
-redirect_from:
-  - /about/
-  - /about.html
 author_profile: true
 ---
 
