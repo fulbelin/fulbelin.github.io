@@ -5,6 +5,7 @@ permalink: /about/
 author_profile: true
 ---
 
+asd
 I see myself as a bioinformatics researcher passionate about building **scalable, interpretable, and ethically aligned machine learning systems** that bridge health, computation, and social impact.  
 
 I’m currently pursuing an **M.Sc. in Bioinformatics** at [Saarland University](https://www.uni-saarland.de/),  
