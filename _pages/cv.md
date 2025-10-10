@@ -76,18 +76,6 @@ Publications & Conferences
 * *DNA Methylation Analysis of Healthy and Cancerous Tissues* — Bioinformatics & Computational Genomics Conf., Moldova (2023)  
 * *Protein Profile of Brain Endothelial Cells* — Sabancı University Program for Undergraduate Research (2021)
 
-Talks
-======
-<ul>{% for post in site.talks reversed %}
-  {% include archive-single-talk-cv.html %}
-{% endfor %}</ul>
-
-Teaching
-======
-<ul>{% for post in site.teaching reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}</ul>
-
 Service and Leadership
 ======
 * **AI Safety Saarland (AISS)** — Co-founder & Marketing Lead: Organized interdisciplinary programs, built brand identity, and coordinated mentorship network at Saarland University.  
