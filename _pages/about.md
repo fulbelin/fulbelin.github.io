@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 I’m Ful Belin Korukoglu, a Master’s student in Bioinformatics at Saarland University and a Research Assistant at the Interdisciplinary Institute for Societal Computing ([I2SC](https://www.i2sc.net/)).
-My work lies at the intersection of artificial intelligence, large-scale systems, and computational biology — where I design intelligent, scalable pipelines that bridge scientific discovery with real-world impact.
+My work lies at the intersection of artificial intelligence, large-scale systems, and computational biology where I design intelligent, scalable pipelines that bridge scientific discovery with real-world impact.
 
 With hands-on experience in Python, R, SQL, C++, and JavaScript, and a strong foundation in machine learning, high-performance computing, and data architecture, I specialize in building end-to-end systems that are both computationally efficient and ethically grounded.
 My broader goal is to engineer technologies that not only advance biomedical and societal research but also reinforce fairness, reproducibility, and transparency in AI.
