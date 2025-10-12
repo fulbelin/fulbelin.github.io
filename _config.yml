@@ -58,7 +58,7 @@ atom_feed:
   path                   :
 
 # ✅ SEO Related
-google_site_verification :   # <-- After Search Console, paste token here
+google_site_verification : "53-aO8K54HXMjGknYAMe1XmPQbuMxvBUI5B53YJxybs"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
