@@ -1,0 +1,32 @@
+{% assign profile = site.data.profile %}
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="hero__eyebrow mono-label">Saarland University · I2SC</p>
+
+      <h1 class="hero__name">{{ profile.name }}</h1>
+      <p class="hero__subtitle">{{ profile.subtitle }}</p>
+
+      {%- comment -%}
+        The research statement is not repeated here: it is the first section of the
+        About text below, which is authored in index.md.
+      {%- endcomment -%}
+      <p class="hero__intro">{{ profile.intro }}</p>
+
+      <ul class="hero__links">
+        {% for link in profile.links %}
+          <li>
+            <a class="hero__link" href="{{ link.url }}"{% unless link.url contains 'mailto' or link.url == '/cv/' %} rel="noopener"{% endunless %}>
+              {% include fbk/icon.html name=link.icon %}
+              <span>{{ link.label }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      {% include fbk/hero-graph.html %}
+    </div>
+  </div>
+</section>

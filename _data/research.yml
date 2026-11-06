@@ -1,0 +1,42 @@
+# Featured research. Content drawn from the About text and the CV page only.
+- category: "Computational Pathology"
+  period: "2025 — Present"
+  title: "Topology-Aware Graph-MIL"
+  tagline: "Graph-based deep learning for molecular prediction from histopathology images."
+  institution: "Saarland University & Technical University of Munich"
+  visual: "graph"
+  body: >-
+    For my Master's thesis I investigate topology-aware graph-based multiple instance learning for
+    predicting molecular characteristics from histopathology images. I develop and evaluate graph
+    neural network architectures built on pathology foundation-model representations, with an
+    emphasis on robustness and generalization.
+  methods:
+    - "Graph Neural Networks"
+    - "Multiple Instance Learning"
+    - "Pathology Foundation Models"
+    - "Robustness"
+  affiliations:
+    - name: "Computational Pathology & Machine Learning, Schüffler Lab"
+      url: "https://schuefflerlab.org/"
+    - name: "Chair of Computational Biology, Saarland University"
+      url: "https://www-cbi.cs.uni-saarland.de/"
+
+- category: "Computational Social Science"
+  period: "2025 — Present"
+  title: "Geospatial Data Infrastructure"
+  tagline: "Scalable systems for large-scale societal research at I2SC."
+  institution: "Interdisciplinary Institute for Societal Computing, Saarland University"
+  visual: "geo"
+  body: >-
+    I develop scalable geospatial data infrastructure for large-scale societal research, integrating
+    Google Maps data with complementary geographic sources. The work involves distributed data
+    collection and processing pipelines, asynchronous workflows, and analyses of hundreds of
+    thousands of places of interest across different regions.
+  methods:
+    - "Distributed Pipelines"
+    - "Geospatial Analytics"
+    - "Asynchronous Workflows"
+    - "Priority Queueing"
+  affiliations:
+    - name: "Interdisciplinary Institute for Societal Computing (I2SC)"
+      url: "https://www.i2sc.net/"

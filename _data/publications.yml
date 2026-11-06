@@ -1,0 +1,31 @@
+# Verified against the CV page. Do not add entries without a source.
+- title: "Mapping Ethical Guidelines for AI in Healthcare: A Global Perspective"
+  authors: "Korukoglu, F. B., et al."
+  role: "First author"
+  venue: "Studies in Health Technology and Informatics, IOS Press"
+  year: "2025"
+  type: "Peer-reviewed"
+  links:
+    - label: "PubMed"
+      url: "https://pubmed.ncbi.nlm.nih.gov/40380727/"
+
+- title: "Assessing Genomic Reproducibility of Read Alignment Tools"
+  authors: "Korukoglu, F. B., et al."
+  venue: "bioRxiv"
+  year: "2025"
+  type: "Preprint"
+  links:
+    - label: "bioRxiv"
+      url: "https://www.biorxiv.org/content/10.1101/2025.05.08.652934v1"
+
+- title: "DNA Methylation Analysis of Healthy and Cancerous Tissues"
+  authors: "Korukoglu, F. B."
+  venue: "Bioinformatics & Computational Genomics Conference, Moldova"
+  year: "2023"
+  type: "Conference"
+
+- title: "Protein Profile of Brain Endothelial Cells"
+  authors: "Korukoglu, F. B."
+  venue: "Sabancı University Program for Undergraduate Research"
+  year: "2021"
+  type: "Undergraduate research"

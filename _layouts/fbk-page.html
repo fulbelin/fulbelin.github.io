@@ -1,0 +1,28 @@
+---
+layout: fbk
+---
+<article class="page-article">
+  <header class="page-head">
+    <div class="wrap">
+      <a class="back-home" href="/">← Back to home</a>
+      {% if page.label %}
+        <div class="section-head">
+          <span class="section-head__label">{{ page.label }}</span>
+          <span class="section-head__rule"></span>
+        </div>
+      {% endif %}
+      <h1 class="page-head__title">{{ page.title }}</h1>
+      {% if page.excerpt and page.show_excerpt %}
+        <p class="lede">{{ page.excerpt | strip_html }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="page-body">
+    <div class="wrap">
+      <div class="prose">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</article>

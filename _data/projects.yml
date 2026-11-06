@@ -1,0 +1,35 @@
+- title: "Saarbrücken Eats"
+  category: "Geospatial Analytics"
+  description: >-
+    An interactive dashboard combining SQL, Google Maps APIs and layered maps to explore restaurants
+    around the Saarland Informatics Campus by cuisine, rating and distance.
+  tags: ["Python", "Flask", "SQL", "Leaflet"]
+  url: "https://github.com/fulbelin/is2c"
+  url_label: "Code"
+
+- title: "Scalable DNA-Seq Pipeline"
+  category: "Computational Genomics"
+  description: >-
+    Automated analysis of PacBio single-end sequencing data with BLEND and Snakemake, built for
+    reproducible benchmarking of read alignment workflows.
+  tags: ["Snakemake", "BLEND", "Bash", "HPC"]
+  url: "https://github.com/fulbelin/Snakemake-workflow-dna-seq-short-read-blend-map"
+  url_label: "Code"
+
+- title: "Multimodal Cancer Diagnosis"
+  category: "Medical Imaging"
+  description: >-
+    A multimodal PET-CT deep learning model predicting lymph-node metastasis, reaching 80% accuracy
+    on the evaluated cohort.
+  tags: ["PyTorch", "Multimodal Learning", "Imaging"]
+  url: "https://github.com/fulbelin/PET_CT"
+  url_label: "Code"
+
+- title: "Global AI Ethics Atlas"
+  category: "AI Governance"
+  description: >-
+    A full-stack platform for organising and comparing 109 international healthcare AI regulatory
+    frameworks and ethical guidelines, developed at Emory University.
+  tags: ["Next.js", "Prisma", "PostgreSQL"]
+  url: "https://pubmed.ncbi.nlm.nih.gov/40380727/"
+  url_label: "Paper"

@@ -1,6 +1,7 @@
 ---
-layout: archive
-title: "CV"
+layout: fbk-page
+title: "Curriculum Vitae"
+label: "CV"
 permalink: /cv/
 author_profile: true
 redirect_from:

@@ -1,0 +1,11 @@
+- group: "Programming Languages"
+  items: ["Python", "SQL", "C++", "R", "Bash"]
+
+- group: "Machine Learning & Scientific Computing"
+  items: ["PyTorch", "PyTorch Geometric", "TensorFlow", "scikit-learn", "NumPy", "pandas", "SHAP"]
+
+- group: "Data Engineering & Backend"
+  items: ["FastAPI", "Flask", "PostgreSQL / PostGIS", "SQLite", "Redis", "Celery"]
+
+- group: "Infrastructure & MLOps"
+  items: ["Docker", "SLURM", "GPU / HPC clusters", "Google Cloud", "Git"]

@@ -1,0 +1,48 @@
+# Identity and links used by the redesigned layout.
+name: "Ful Belin Korukoglu"
+short_name: "Belin Korukoglu"
+monogram: "FBK."
+subtitle: "Bioinformatics · Machine Learning · Scientific AI"
+intro: >-
+  I'm a Master's student in Bioinformatics at Saarland University and a Research Assistant
+  at the Interdisciplinary Institute for Societal Computing (I2SC).
+statement: >-
+  I'm interested in developing AI systems that accelerate scientific discovery through robust,
+  reproducible, and uncertainty-aware reasoning. My interests include reliable machine learning,
+  evidence-based decision-making, and autonomous scientific agents.
+portrait: "/images/profile_photo.png"
+location: "Saarbrücken, Germany"
+
+links:
+  - label: "GitHub"
+    url: "https://github.com/fulbelin"
+    icon: "github"
+  - label: "Google Scholar"
+    url: "https://scholar.google.com/citations?user=Hdj-VHIAAAAJ&hl=en"
+    icon: "scholar"
+  - label: "LinkedIn"
+    url: "https://www.linkedin.com/in/belin-korukoglu"
+    icon: "linkedin"
+  - label: "ORCID"
+    url: "https://orcid.org/0009-0005-7211-2022"
+    icon: "orcid"
+  - label: "Email"
+    url: "mailto:fulbelin.korukoglu@gmail.com"
+    icon: "mail"
+  - label: "CV"
+    url: "/cv/"
+    icon: "cv"
+
+nav:
+  - title: "About"
+    anchor: "#about"
+  - title: "Research"
+    anchor: "#research"
+  - title: "Publications"
+    anchor: "#publications"
+  - title: "Experience"
+    anchor: "#experience"
+  - title: "Projects"
+    anchor: "#projects"
+  - title: "Contact"
+    anchor: "#contact"

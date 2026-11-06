@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% assign profile = site.data.profile %}
+  {% if page.title and page.url != '/' %}
+    {% assign seo_title = page.title | append: ' ' | append: site.title_separator | append: ' ' | append: site.title %}
+  {% else %}
+    {% assign seo_title = site.title %}
+  {% endif %}
+  {% assign seo_description = page.description | default: site.description %}
+
+  <title>{{ seo_title | strip_html | escape_once }}</title>
+  <meta name="description" content="{{ seo_description | strip_html | escape_once }}">
+  <meta name="author" content="{{ site.author.name }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <meta property="og:type" content="{% if page.url == '/' %}profile{% else %}article{% endif %}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page.title | default: site.title | strip_html | escape_once }}">
+  <meta property="og:description" content="{{ seo_description | strip_html | escape_once }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/images/profile_photo.png' | absolute_url }}">
+  <meta name="twitter:card" content="summary">
+
+  <meta name="theme-color" content="#15251E">
+  <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" href="/images/favicon.ico">
+  <link rel="manifest" href="/images/manifest.json">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..600;1,9..40,400&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="/assets/css/fbk.css?v=2">
+
+  {% if site.atom_feed.hide != true %}
+    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
+  {% endif %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Belin Korukoglu",
+    "alternateName": "Ful Belin Korukoglu",
+    "givenName": "Belin",
+    "familyName": "Korukoglu",
+    "jobTitle": "Research Assistant",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Saarland University" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Saarland University" },
+    "description": {{ site.description | strip_html | jsonify }},
+    "url": "https://fulbelin.github.io",
+    "image": "https://fulbelin.github.io/images/profile_photo.png",
+    "email": "mailto:{{ site.author.email }}",
+    "knowsAbout": [
+      "Bioinformatics", "Machine Learning", "Computational Pathology",
+      "Graph Neural Networks", "Geospatial Data", "AI Safety"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/belin-korukoglu",
+      "https://scholar.google.com/citations?user=Hdj-VHIAAAAJ",
+      "https://github.com/fulbelin",
+      "https://www.researchgate.net/profile/Ful-Belin-Korukoglu",
+      "https://orcid.org/0009-0005-7211-2022"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a class="nav__brand" href="/">{{ profile.monogram }}</a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+
+      <nav aria-label="Primary">
+        <ul class="nav__list" id="nav-list" data-open="false">
+          {% for item in profile.nav %}
+            <li><a class="nav__link" href="{% if page.url != '/' %}/{% endif %}{{ item.anchor }}">{{ item.title }}</a></li>
+          {% endfor %}
+          {%- comment -%}Mobile only: on wider screens the CV button on the right covers this.{%- endcomment -%}
+          <li class="nav__item--cv"><a class="nav__link" href="/cv/">CV</a></li>
+        </ul>
+      </nav>
+
+      <a class="nav__cv" href="/cv/">Curriculum Vitae</a>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>&copy; {{ site.time | date: "%Y" }} {{ profile.name }}</span>
+      <ul class="footer__links">
+        {% for link in profile.links %}
+          <li><a href="{{ link.url }}">{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+      <span>Built with Jekyll</span>
+    </div>
+  </footer>
+
+  <script src="/assets/js/fbk.js?v=2" defer></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: home
 permalink: /
 author_profile: true
 ---

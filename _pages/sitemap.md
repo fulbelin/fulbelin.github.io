@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: fbk-page
 title: "Sitemap"
 permalink: /sitemap/
 author_profile: true
