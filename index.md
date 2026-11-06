@@ -1,3 +1,9 @@
+---
+layout: single
+permalink: /
+author_profile: true
+---
+
 # About Me
 
 Hi! I'm Ful Belin Korukoglu, a Master's student in Bioinformatics at Saarland University and a Research Assistant at the [Interdisciplinary Institute for Societal Computing (I2SC)](https://www.i2sc.net/). I am doing my thesis jointly at [Computational Pathology & Machine Learning at Schüffler Lab](https://schuefflerlab.org/) and [Chair of Computational Biology at Saarland University](https://www-cbi.cs.uni-saarland.de/). 
