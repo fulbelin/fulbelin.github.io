@@ -1,38 +1,43 @@
+# About Me
 
+Hi! I'm Ful Belin Korukoglu, a Master's student in Bioinformatics at Saarland University and a Research Assistant at the [Interdisciplinary Institute for Societal Computing (I2SC)](https://www.i2sc.net/). I am doing my thesis jointly at [Computational Pathology & Machine Learning at Schüffler Lab](https://schuefflerlab.org/) and [Chair of Computational Biology at Saarland University](https://www-cbi.cs.uni-saarland.de/). 
 
-I’m Ful Belin Korukoglu, a Master’s student in Bioinformatics at Saarland University and a Research Assistant at the Interdisciplinary Institute for Societal Computing ([I2SC](https://www.i2sc.net/)).
-My work lies at the intersection of artificial intelligence, large-scale systems, and computational biology where I design intelligent, scalable pipelines that bridge scientific discovery with real-world impact.
+## Research Interests
 
-With hands-on experience in Python, R, SQL, C++, and JavaScript, and a strong foundation in machine learning, high-performance computing, and data architecture, I specialize in building end-to-end systems that are both computationally efficient and ethically grounded.
-My broader goal is to engineer technologies that not only advance biomedical and societal research but also reinforce fairness, reproducibility, and transparency in AI.
+I'm interested in developing AI systems that accelerate scientific discovery through robust, reproducible, and uncertainty-aware reasoning. My research interests include reliable machine learning, evidence-based decision-making, and autonomous scientific agents.
 
-What I’m Working On
-======
-At the Interdisciplinary Institute for Societal Computing, I am developing a scalable geo-intelligence platform that integrates Google Maps data with complementary geospatial sources for large-scale regional analysis.
-The system enables dynamic insights such as live traffic trends, population movement, and user behavior across geographic boundaries. This is achieved by combining PostgreSQL/PostGIS, Redis, and asynchronous microservices for high-throughput data ingestion and analysis.
+## What I'm Working On
 
+**Geospatial Data Infrastructure — [I2SC, Saarland University](https://www.i2sc.net/)**
 
-Selected Previous Work
-======
-Medical Imaging Reconstruction (Harvard Medical School)
-Designed and optimized convolutional neural networks (CNNs) for parallel imaging reconstruction, improving signal-to-noise ratio and reconstruction speed.
+I develop scalable geospatial data infrastructure for large-scale societal research, integrating Google Maps data with complementary geographic sources. My work involves building distributed data collection and processing pipelines, optimizing asynchronous workflows, and enabling analyses of hundreds of thousands of places of interest across different regions.
 
-Sepsis Mortality Prediction (University of Southern California)
-Developed ensemble models using Random Forests, Gradient Boosting, and k-Nearest Neighbors to predict sepsis outcomes from clinical time-series data.
+**Graph-Based Deep Learning for Computational Pathology — Saarland University & Technical University of Munich**
 
-Global AI Ethics Atlas (Emory University)
-Built an interactive global visualization platform that maps medical AI ethics guidelines across countries, integrating NLP and geospatial data visualization in React.
+For my Master's thesis, I investigate topology-aware graph-based multiple instance learning for predicting molecular characteristics from histopathology images. I develop and evaluate graph neural network architectures using pathology foundation-model representations, with an emphasis on robustness and generalization.
 
-Genomic Reproducibility Benchmark (ETH Zürich)
-Automated genomic workflows with Snakemake on HPC clusters to assess reproducibility of read alignment tools, improving consistency and transparency in bioinformatics analysis.
+## Selected Previous Work 
 
-AI Safety & Community
-======
-Alongside my research, I lead Marketing and Outreach at [AI Safety Saarland (AISS)](https://www.ais-saarland.org/), a student-led initiative promoting safe, fair, and beneficial AI development.
-I coordinate cross-channel campaigns, oversee event communications, and collaborate with researchers and mentors worldwide to grow an interdisciplinary community around AI safety.
+**Medical Imaging Reconstruction @ Harvard Medical School**
 
-Before that, I worked as a Marketing Specialist at Thread In Motion, where I led data-driven campaigns across Google Ads, LinkedIn, and Meta, integrated HubSpot automations, and deployed machine learning analytics pipelines to improve user acquisition and retention.
+Implemented and evaluated deep learning pipelines for MRI reconstruction across multiple imaging datasets and undersampling conditions, automating model inference and reconstruction-quality evaluation.
 
-In Short
-======
-I care deeply about building systems that matter aka scalable infrastructures that accelerate research, advance healthcare, and make technology more responsible. My goal is creating tools that empower both researchers and society at large.
+**Sepsis Mortality Prediction @ University of Southern California**
+
+Benchmarked classical and deep learning models for sepsis mortality prediction across 16 independent transcriptomic cohorts, investigating cross-cohort generalization, feature importance, and reproducibility of predictive biological signals.
+
+**Global AI Ethics Atlas @ Emory University**
+
+Developed a full-stack healthcare AI governance platform for organizing and comparing international regulatory frameworks and ethical guidelines. This research contributed to my first-author publication, *Mapping Ethical Guidelines for AI in Healthcare: A Global Perspective* (2025).
+
+**Genomic Reproducibility Benchmark @ ETH Zürich**
+
+Investigated the reproducibility of genomic read alignment tools and developed automated bioinformatics workflows using Snakemake for systematic benchmarking and reproducible analysis.
+
+## Other Interests
+
+Alongside my technical research, I'm interested in the reliability, transparency, and societal implications of increasingly capable AI systems.
+
+I previously led Marketing and Outreach at [AI Safety Saarland (AISS)](https://www.ais-saarland.org/), a student-led initiative promoting safe, fair, and beneficial AI development.  
+
+Previously, I also worked as a Marketing Specialist at Thread In Motion, where I managed data-driven digital campaigns, integrated marketing automation workflows, and developed analytics pipelines to support user acquisition and retention.
