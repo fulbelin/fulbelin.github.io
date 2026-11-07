@@ -2,7 +2,6 @@
 - category: "Computational Pathology"
   period: "2025 — Present"
   title: "Topology-Aware Graph-MIL"
-  institution: "Saarland University & Technical University of Munich"
   visual: "graph"
   body: >-
     For my Master's thesis, I investigate topology-aware graph-based multiple instance learning for
@@ -23,7 +22,6 @@
 - category: "Computational Social Science"
   period: "2025 — Present"
   title: "Geospatial Data Infrastructure"
-  institution: "Interdisciplinary Institute for Societal Computing, Saarland University"
   visual: "geo"
   body: >-
     I develop scalable geospatial data infrastructure for computational social science, integrating
