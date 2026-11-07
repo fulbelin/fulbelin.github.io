@@ -1,25 +1,50 @@
+{%- comment -%}
+  Language wiring. A page may set `lang` (en | de) and name its counterpart
+  with `url_en` / `url_de`. `d` is the data tree for that language, so nothing
+  below this block has to branch again: English reads _data/*.yml, German
+  reads _data/de/*.yml.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: 'en' -%}
+{%- if lang == 'de' -%}
+  {%- assign d = site.data.de -%}
+  {%- assign home_url = '/de/' -%}
+  {%- assign cv_url = '/de/cv/' -%}
+  {%- assign og_locale = 'de_DE' -%}
+{%- else -%}
+  {%- assign d = site.data -%}
+  {%- assign home_url = '/' -%}
+  {%- assign cv_url = '/cv/' -%}
+  {%- assign og_locale = 'en_US' -%}
+{%- endif -%}
+{%- assign profile = d.profile -%}
+{%- assign s = d.strings -%}
+{%- assign url_en = page.url_en | default: '/' -%}
+{%- assign url_de = page.url_de | default: '/de/' -%}
 <!doctype html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {% assign profile = site.data.profile %}
-  {% if page.title and page.url != '/' %}
-    {% assign seo_title = page.title | append: ' ' | append: site.title_separator | append: ' ' | append: site.title %}
+  {% if page.title and page.url != home_url %}
+    {% assign seo_title = page.title | append: ' ' | append: site.title_separator | append: ' ' | append: s.site_title %}
   {% else %}
-    {% assign seo_title = site.title %}
+    {% assign seo_title = s.site_title %}
   {% endif %}
-  {% assign seo_description = page.description | default: site.description %}
+  {% assign seo_description = page.description | default: s.site_description %}
 
   <title>{{ seo_title | strip_html | escape_once }}</title>
   <meta name="description" content="{{ seo_description | strip_html | escape_once }}">
   <meta name="author" content="{{ site.author.name }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" hreflang="en" href="{{ url_en | absolute_url }}">
+  <link rel="alternate" hreflang="de" href="{{ url_de | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ url_en | absolute_url }}">
 
   <meta property="og:type" content="{% if page.url == '/' %}profile{% else %}article{% endif %}">
-  <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:title" content="{{ page.title | default: site.title | strip_html | escape_once }}">
+  <meta property="og:site_name" content="{{ s.site_title }}">
+  <meta property="og:locale" content="{{ og_locale }}">
+  <meta property="og:title" content="{{ page.title | default: s.site_title | strip_html | escape_once }}">
   <meta property="og:description" content="{{ seo_description | strip_html | escape_once }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ '/images/profile_photo.png' | absolute_url }}">
@@ -38,7 +63,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=NTR&display=swap">
-  <link rel="stylesheet" href="/assets/css/fbk.css?v=11">
+  <link rel="stylesheet" href="/assets/css/fbk.css?v=15">
 
   {% if site.atom_feed.hide != true %}
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
@@ -55,7 +80,7 @@
     "jobTitle": "Research Assistant",
     "affiliation": { "@type": "CollegeOrUniversity", "name": "Saarland University" },
     "alumniOf": { "@type": "CollegeOrUniversity", "name": "Saarland University" },
-    "description": {{ site.description | strip_html | jsonify }},
+    "description": {{ s.site_description | strip_html | jsonify }},
     "url": "https://fulbelin.github.io",
     "image": "https://fulbelin.github.io/images/profile_photo.png",
     "email": "mailto:{{ site.author.email }}",
@@ -75,29 +100,31 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">{{ s.skip_link }}</a>
 
   <header class="nav">
     <div class="wrap nav__inner">
-      <a class="nav__brand" href="/">{{ profile.monogram }}</a>
+      <a class="nav__brand" href="{{ home_url }}">{{ profile.monogram }}</a>
 
-      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="{{ s.nav_toggle }}">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
           <path d="M4 7h16M4 12h16M4 17h16"/>
         </svg>
       </button>
 
-      <nav aria-label="Primary">
+      <nav aria-label="{{ s.nav_label }}">
         <ul class="nav__list" id="nav-list" data-open="false">
           {% for item in profile.nav %}
-            <li><a class="nav__link" href="{% if page.url != '/' %}/{% endif %}{{ item.anchor }}">{{ item.title }}</a></li>
+            <li><a class="nav__link" href="{% if page.url != home_url %}{{ home_url }}{% endif %}{{ item.anchor }}">{{ item.title }}</a></li>
           {% endfor %}
           {%- comment -%}Mobile only: on wider screens the CV button on the right covers this.{%- endcomment -%}
-          <li class="nav__item--cv"><a class="nav__link" href="/cv/">CV</a></li>
+          <li class="nav__item--cv"><a class="nav__link" href="{{ cv_url }}">{{ s.cv_short }}</a></li>
         </ul>
       </nav>
 
-      <a class="nav__cv" href="/cv/">Curriculum Vitae</a>
+      {% include fbk/lang-switch.html lang=lang url_en=url_en url_de=url_de label=s.language_label label_en=s.language_en label_de=s.language_de %}
+
+      <a class="nav__cv" href="{{ cv_url }}">{{ s.cv_long }}</a>
     </div>
   </header>
 
@@ -116,6 +143,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/fbk.js?v=7" defer></script>
+  <script src="/assets/js/fbk.js?v=8" defer></script>
 </body>
 </html>

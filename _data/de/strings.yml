@@ -1,0 +1,58 @@
+# Deutsche Oberflächentexte. Gegenstück: _data/strings.yml — beide Dateien
+# müssen dieselben Schlüssel führen.
+#
+# Hinweis: Die Texte sind bewusst geschlechtsneutral formuliert (Verbformen
+# statt „Forscherin/Forscher“). Wenn eine Form gewünscht ist, lässt sie sich
+# hier und in _data/de/profile.yml an einer Stelle ändern.
+site_title: "Belin Korukoglu – Bioinformatik & KI-Forschung"
+site_description: "Masterstudium Bioinformatik an der Universität des Saarlandes, mit Schwerpunkt auf KI, maschinellem Lernen und skalierbaren Systemen für Medizin und Geodaten."
+
+skip_link: "Zum Inhalt springen"
+nav_label: "Hauptnavigation"
+nav_toggle: "Navigation ein- und ausblenden"
+cv_long: "Lebenslauf"
+cv_short: "CV"
+back_home: "← Zurück zur Startseite"
+
+language_label: "Sprache"
+language_en: "Englisch"
+language_de: "Deutsch"
+
+sections:
+  research: "01 / Aktuelle Arbeit"
+  publications: "02 / Publikationen"
+  experience: "03 / Forschungserfahrung"
+  projects: "04 / Ausgewählte Projekte"
+  skills: "05 / Technische Werkzeuge"
+  community: "06 / KI-Sicherheit &amp; Community"
+  contact: "07 / Kontakt"
+
+carousel:
+  label: "Aktuelle Arbeit"
+  previous: "Vorheriges Projekt"
+  next: "Nächstes Projekt"
+  show: "Anzeigen:"
+  status: "Karte %n von %total"
+
+experience_tabs: "Forschungsstationen"
+
+community:
+  heading: "Verlässlichkeit ist eine gemeinschaftliche Aufgabe."
+  body_1: >-
+    Neben meiner technischen Forschung beschäftige ich mich mit der Verlässlichkeit, der
+    Transparenz und den gesellschaftlichen Folgen immer leistungsfähigerer KI-Systeme — also
+    mit denselben Fragen, die Reproduzierbarkeit und sorgfältige Evaluation zum Kern meiner
+    Arbeitsweise machen.
+  body_2: >-
+    Zuvor habe ich <strong>Marketing und Outreach</strong> bei
+    <a href="https://www.ais-saarland.org/" rel="noopener">AI Safety Saarland (AISS)</a>
+    geleitet, einer studentischen Initiative für eine sichere, faire und nützliche
+    KI-Entwicklung. Dort habe ich die Markenidentität aufgebaut und interdisziplinäre
+    Programme sowie ein Mentoring-Netzwerk an der Universität des Saarlandes koordiniert.
+
+contact:
+  heading: "Nehmen wir Kontakt auf."
+  body: >-
+    Über Forschungskooperationen, fachlichen Austausch und interdisziplinäre Projekte freue
+    ich mich jederzeit — in der computergestützten Pathologie, in der wissenschaftlichen KI
+    oder überall dort, wo beides zusammenkommt.

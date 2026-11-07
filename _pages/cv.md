@@ -4,6 +4,9 @@ title: "Curriculum Vitae"
 label: "CV"
 permalink: /cv/
 author_profile: true
+lang: en
+url_en: /cv/
+url_de: /de/cv/
 redirect_from:
   - /resume
 ---

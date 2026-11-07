@@ -1,0 +1,18 @@
+{%- comment -%}
+  EN / DE switch. Each page names its counterpart through url_en and url_de,
+  so the switch always lands on the same page in the other language rather
+  than on the homepage.
+{%- endcomment -%}
+<div class="lang-switch" role="group" aria-label="{{ include.label }}">
+  <a class="lang-switch__option"
+     href="{{ include.url_en }}"
+     hreflang="en"
+     lang="en"{% if include.lang == 'en' %}
+     aria-current="true"{% endif %}>EN<span class="visually-hidden"> — {{ include.label_en }}</span></a>
+  <span class="lang-switch__sep" aria-hidden="true">/</span>
+  <a class="lang-switch__option"
+     href="{{ include.url_de }}"
+     hreflang="de"
+     lang="de"{% if include.lang == 'de' %}
+     aria-current="true"{% endif %}>DE<span class="visually-hidden"> — {{ include.label_de }}</span></a>
+</div>

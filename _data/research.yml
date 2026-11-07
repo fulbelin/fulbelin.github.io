@@ -3,11 +3,12 @@
   period: "2026 — Present"
   title: "Topology-Aware Graph-MIL"
   visual: "graph"
-  # A figure from the work replaces the drawn diagram above. Drop the file in
-  # images/research/ and uncomment these three lines:
-  image: "/images/research/thesis.jpg"
-  # image_alt: "Describe what the figure shows, in a sentence."
-  image_caption: "Comparing DNA methylation-based models and H&E histopathology approaches for predicting BRAF V600E mutation status in melanoma. Methylation-based feature selection achieved a patient-level AUROC of 0.784, outperforming the evaluated H&E-based models."
+  image: "/images/research/thesis.png"
+  image_alt: >-
+    Results comparing DNA methylation-based models with H&E histopathology approaches for
+    predicting BRAF V600E mutation status in melanoma, with methylation-based feature selection
+    reaching a patient-level AUROC of 0.784.
+  image_caption: "Predicting BRAF V600E status in melanoma: methylation-based feature selection reached a patient-level AUROC of 0.784, ahead of the evaluated H&E models."
   body: >-
     For my Master's thesis, I develop and evaluate graph-based multiple instance learning models using pathology foundation models to predict molecular characteristics from histopathology images, focusing on robustness and generalization.
   methods:
@@ -25,11 +26,11 @@
   period: "2026 — Present"
   title: "Geospatial Data Infrastructure"
   visual: "geo"
-    # A figure from the work replaces the drawn diagram above. Drop the file in
-  # images/research/ and uncomment these three lines:
-  image: "/images/research/fc_away.jpg"
-  # image_alt: "Describe what the figure shows, in a sentence."
-  image_caption: "Analyzing the relationship between 1. FC Saarbrücken match weekends and local restaurant occupancy using large-scale geospatial data. Average occupancy increased from 30.8% on non-game weekends to 48.3% on away-game weekends."
+  image: "/images/research/fc_away.png"
+  image_alt: >-
+    Chart of local restaurant occupancy around 1. FC Saarbrücken match weekends, rising from
+    30.8 per cent on non-game weekends to 48.3 per cent on away-game weekends.
+  image_caption: "Restaurant occupancy around 1. FC Saarbrücken match weekends: 48.3% on away-game weekends against 30.8% without a game."
   body: >-
     At I2SC, I develop scalable geospatial data pipelines using Python, FastAPI, PostgreSQL/PostGIS, and Redis/Celery, supporting research across 300,000+ locations in 50+ regions. By optimizing asynchronous processing and distributed workflows, I reduced per-record processing time by 35%, enabling faster and more efficient large-scale computational social science research.
   methods:

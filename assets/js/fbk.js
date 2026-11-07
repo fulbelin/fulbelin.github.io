@@ -158,8 +158,10 @@
     });
 
     if (announce && status) {
-      status.textContent = 'Card ' + (index + 1) + ' of ' + count + ': '
-        + slides[index].querySelector('.panel__title').textContent.trim();
+      // the wording comes from the page, so it follows its language
+      var template = status.getAttribute('data-status-template') || 'Card %n of %total';
+      status.textContent = template.replace('%n', index + 1).replace('%total', count)
+        + ': ' + slides[index].querySelector('.panel__title').textContent.trim();
     }
   }
 

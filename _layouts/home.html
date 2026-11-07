@@ -1,7 +1,14 @@
 ---
 layout: fbk
 ---
-{% assign profile = site.data.profile %}
+{%- comment -%}
+  Same language wiring as _layouts/fbk.html: `d` is the data tree for this
+  page's language, `s` its interface strings.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: 'en' -%}
+{%- if lang == 'de' -%}{%- assign d = site.data.de -%}{%- else -%}{%- assign d = site.data -%}{%- endif -%}
+{%- assign profile = d.profile -%}
+{%- assign s = d.strings -%}
 
 {% include fbk/hero.html %}
 
@@ -9,7 +16,7 @@ layout: fbk
 <section class="section" id="research" aria-labelledby="research-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="research-title">01 / Current Work</span>
+      <span class="section-head__label" id="research-title">{{ s.sections.research }}</span>
       <span class="section-head__rule"></span>
     </div>
 
@@ -19,11 +26,11 @@ layout: fbk
          data-carousel
          role="group"
          aria-roledescription="carousel"
-         aria-label="Current work">
+         aria-label="{{ s.carousel.label }}">
 
       <div class="carousel__frame">
         <button class="carousel__nav carousel__nav--prev" type="button" data-carousel-prev
-                aria-label="Previous project">
+                aria-label="{{ s.carousel.previous }}">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path d="M14.5 5 7.5 12l7 7" fill="none" stroke="currentColor"
                   stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -32,7 +39,7 @@ layout: fbk
 
         <div class="carousel__viewport">
           <div class="carousel__track" data-carousel-track>
-            {% for item in site.data.research %}
+            {% for item in d.research %}
               <article class="panel carousel__slide"
                        role="group"
                        aria-roledescription="slide"
@@ -90,7 +97,7 @@ layout: fbk
         </div>
 
         <button class="carousel__nav carousel__nav--next" type="button" data-carousel-next
-                aria-label="Next project">
+                aria-label="{{ s.carousel.next }}">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path d="M9.5 5l7 7-7 7" fill="none" stroke="currentColor"
                   stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -99,14 +106,15 @@ layout: fbk
       </div>
 
       <div class="carousel__dots" data-carousel-dots>
-        {% for item in site.data.research %}
+        {% for item in d.research %}
           <button class="carousel__dot" type="button"
-                  aria-label="Show {{ item.title }}"
+                  aria-label="{{ s.carousel.show }} {{ item.title }}"
                   aria-current="{% if forloop.first %}true{% else %}false{% endif %}"></button>
         {% endfor %}
       </div>
 
-      <p class="visually-hidden" aria-live="polite" data-carousel-status></p>
+      <p class="visually-hidden" aria-live="polite" data-carousel-status
+           data-status-template="{{ s.carousel.status }}"></p>
     </div>
   </div>
 </section>
@@ -115,12 +123,12 @@ layout: fbk
 <section class="section" id="publications" aria-labelledby="publications-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="publications-title">02 / Publications</span>
+      <span class="section-head__label" id="publications-title">{{ s.sections.publications }}</span>
       <span class="section-head__rule"></span>
     </div>
 
     <ol class="pubs">
-      {% for pub in site.data.publications %}
+      {% for pub in d.publications %}
         <li class="pub reveal">
           <div class="pub__year">
             {{ pub.year }}
@@ -152,13 +160,13 @@ layout: fbk
 <section class="section" id="experience" aria-labelledby="experience-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="experience-title">03 / Research Experience</span>
+      <span class="section-head__label" id="experience-title">{{ s.sections.experience }}</span>
       <span class="section-head__rule"></span>
     </div>
 
     <div class="xp reveal">
-      <div class="xp__tabs" role="tablist" aria-label="Research positions" data-xp-tablist>
-        {% for role in site.data.experience %}
+      <div class="xp__tabs" role="tablist" aria-label="{{ s.experience_tabs }}" data-xp-tablist>
+        {% for role in d.experience %}
           <button class="xp__tab"
                   type="button"
                   role="tab"
@@ -170,7 +178,7 @@ layout: fbk
       </div>
 
       <div class="xp__panels">
-        {% for role in site.data.experience %}
+        {% for role in d.experience %}
           <div class="xp__panel"
                role="tabpanel"
                id="panel-{{ role.id }}"
@@ -197,12 +205,12 @@ layout: fbk
 <section class="section" id="projects" aria-labelledby="projects-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="projects-title">04 / Selected Projects</span>
+      <span class="section-head__label" id="projects-title">{{ s.sections.projects }}</span>
       <span class="section-head__rule"></span>
     </div>
 
     <div class="projects">
-      {% for project in site.data.projects %}
+      {% for project in d.projects %}
         <article class="project reveal">
           <p class="project__category">{{ project.category }}</p>
           <h3 class="project__title">{{ project.title }}</h3>
@@ -229,12 +237,12 @@ layout: fbk
 <section class="section" id="skills" aria-labelledby="skills-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="skills-title">05 / Technical Toolkit</span>
+      <span class="section-head__label" id="skills-title">{{ s.sections.skills }}</span>
       <span class="section-head__rule"></span>
     </div>
 
     <div class="skills">
-      {% for group in site.data.skills %}
+      {% for group in d.skills %}
         <div class="reveal">
           <p class="skill__group">{{ group.group }}</p>
           <ul class="skill__list">
@@ -252,24 +260,16 @@ layout: fbk
 <section class="section" id="community" aria-labelledby="community-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="community-title">06 / AI Safety &amp; Community</span>
+      <span class="section-head__label" id="community-title">{{ s.sections.community }}</span>
       <span class="section-head__rule"></span>
     </div>
 
     <div class="community reveal">
-      <h3 class="section-title">Reliability is a community problem.</h3>
+      <h3 class="section-title">{{ s.community.heading }}</h3>
 
       <div class="community__body">
-        <p>
-          Alongside my technical research, I'm interested in the reliability, transparency and
-          societal implications of increasingly capable AI systems.
-        </p>
-        <p>
-          I previously led <strong>Marketing and Outreach</strong> at
-          <a href="https://www.ais-saarland.org/" rel="noopener">AI Safety Saarland (AISS)</a>, a
-          student-led initiative promoting safe, fair and beneficial AI development, where I built
-          the brand identity and led campains with the aim of spreading awareness on AI Safety.
-        </p>
+        <p>{{ s.community.body_1 }}</p>
+        <p>{{ s.community.body_2 }}</p>
       </div>
     </div>
   </div>
@@ -279,17 +279,12 @@ layout: fbk
 <section class="section" id="contact" aria-labelledby="contact-title">
   <div class="wrap contact reveal">
     <div class="section-head">
-      <span class="section-head__label" id="contact-title">07 / Contact</span>
+      <span class="section-head__label" id="contact-title">{{ s.sections.contact }}</span>
       <span class="section-head__rule"></span>
     </div>
 
-    <h2 class="contact__title">Let's connect.</h2>
-    <p class="contact__body">
-      I'm always glad to hear about research collaborations, academic discussions and
-      interdisciplinary projects in healthcare, scientific AI, societal computing or anything
-      else that might be interesting. Please feel free to reach out via email or any of the
-      social links.
-    </p>
+    <h2 class="contact__title">{{ s.contact.heading }}</h2>
+    <p class="contact__body">{{ s.contact.body }}</p>
 
     <a class="contact__mail" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
 

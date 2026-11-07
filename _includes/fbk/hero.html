@@ -1,4 +1,7 @@
-{% assign profile = site.data.profile %}
+{%- comment -%}The hero follows the page's language, like the rest of the layout.{%- endcomment -%}
+{%- assign hero_lang = page.lang | default: 'en' -%}
+{%- if hero_lang == 'de' -%}{%- assign profile = site.data.de.profile -%}
+{%- else -%}{%- assign profile = site.data.profile -%}{%- endif -%}
 <section class="hero">
   <div class="wrap hero__grid">
     <div class="hero__text">

@@ -1,0 +1,29 @@
+# Deutsche Fassung von _data/experience.yml. Einrichtungen behalten ihren
+# offiziellen Namen; die ids müssen mit der englischen Datei übereinstimmen.
+- id: "harvard"
+  role: "Rekonstruktion medizinischer Bildgebung"
+  institution: "Harvard Medical School"
+  short: "Harvard"
+  points:
+    - "Deep-Learning-Pipelines zur MRT-Rekonstruktion über mehrere Bilddatensätze und Unterabtastungsbedingungen hinweg umgesetzt und evaluiert, einschließlich automatisierter Modellinferenz und automatisierter Bewertung der Rekonstruktionsqualität."
+
+- id: "usc"
+  role: "Mortalitätsvorhersage bei Sepsis"
+  institution: "University of Southern California"
+  short: "USC"
+  points:
+    - "Klassische und Deep-Learning-Modelle zur Mortalitätsvorhersage bei Sepsis über 16 unabhängige Transkriptom-Kohorten hinweg verglichen und dabei kohortenübergreifende Generalisierung, Merkmalsrelevanz und die Reproduzierbarkeit prädiktiver biologischer Signale untersucht."
+
+- id: "emory"
+  role: "Global AI Ethics Atlas"
+  institution: "Emory University"
+  short: "Emory"
+  points:
+    - "Eine Full-Stack-Plattform zur Governance von KI im Gesundheitswesen entwickelt, die internationale Regulierungsrahmen und Ethikleitlinien erschließt und vergleichbar macht. Aus dieser Arbeit ist meine erste Publikation in Erstautorenschaft hervorgegangen: <em>Mapping Ethical Guidelines for AI in Healthcare: A Global Perspective</em> (2025)."
+
+- id: "eth"
+  role: "Benchmark zur Reproduzierbarkeit in der Genomik"
+  institution: "ETH Zürich"
+  short: "ETH Zürich"
+  points:
+    - "Die Reproduzierbarkeit genomischer Read-Alignment-Werkzeuge untersucht und automatisierte bioinformatische Workflows mit Snakemake für systematisches Benchmarking und reproduzierbare Analysen entwickelt."

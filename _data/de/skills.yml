@@ -1,0 +1,13 @@
+# Deutsche Fassung von _data/skills.yml. Nur die Gruppennamen sind übersetzt —
+# die Werkzeuge heißen im Deutschen genauso.
+- group: "Programmiersprachen"
+  items: ["Python", "SQL", "C++", "R", "Bash"]
+
+- group: "Maschinelles Lernen & wissenschaftliches Rechnen"
+  items: ["PyTorch", "PyTorch Geometric", "TensorFlow", "scikit-learn", "NumPy", "pandas", "SHAP"]
+
+- group: "Data Engineering & Backend"
+  items: ["FastAPI", "Flask", "PostgreSQL / PostGIS", "SQLite", "Redis", "Celery"]
+
+- group: "Infrastruktur & MLOps"
+  items: ["Docker", "SLURM", "GPU- / HPC-Cluster", "Google Cloud", "Git"]

@@ -1,0 +1,47 @@
+# Deutsche Fassung von _data/profile.yml. Gleiche Schlüssel, übersetzte Werte.
+name: "Ful Belin Korukoglu"
+short_name: "Belin Korukoglu"
+monogram: "Belin"
+subtitle: "Bioinformatik · Maschinelles Lernen · Wissenschaftliche KI"
+intro: >-
+
+ Ich forsche in Deutschland an der Schnittstelle von Bioinformatik und Societal Computing und
+ entwickle KI-Modelle für die biomedizinische Forschung sowie großskalige Datensysteme für die
+ Erforschung gesellschaftlicher Fragen.
+
+ Mein Ziel ist es, wissenschaftliche Erkenntnis durch verlässliche, autonome KI-Systeme
+ voranzubringen, die evidenzbasiert schließen und unter Unsicherheit entscheiden können.
+portrait: "/images/profile_photo.png"
+location: "Saarbrücken, Deutschland"
+
+links:
+  - label: "GitHub"
+    url: "https://github.com/fulbelin"
+    icon: "github"
+  - label: "Google Scholar"
+    url: "https://scholar.google.com/citations?user=Hdj-VHIAAAAJ&hl=de"
+    icon: "scholar"
+  - label: "LinkedIn"
+    url: "https://www.linkedin.com/in/belin-korukoglu"
+    icon: "linkedin"
+  - label: "ORCID"
+    url: "https://orcid.org/0009-0005-7211-2022"
+    icon: "orcid"
+  - label: "E-Mail"
+    url: "mailto:fulbelin.korukoglu@gmail.com"
+    icon: "mail"
+  - label: "Lebenslauf"
+    url: "/de/cv/"
+    icon: "cv"
+
+nav:
+  - title: "Forschung"
+    anchor: "#research"
+  - title: "Publikationen"
+    anchor: "#publications"
+  - title: "Erfahrung"
+    anchor: "#experience"
+  - title: "Projekte"
+    anchor: "#projects"
+  - title: "Kontakt"
+    anchor: "#contact"

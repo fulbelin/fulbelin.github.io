@@ -1,0 +1,45 @@
+# Deutsche Fassung von _data/publications.yml. Titel, Autorenangaben und
+# Publikationsorte bleiben im Original; übersetzt sind nur Rolle und Art.
+- title: "VOYAGER: Probing Traveller Experience and Reported Discrimination in Google Maps Reviews of Global Airports"
+  authors: "Wiltzius, D., Korukoglu, F. B., Weber, I., & Cannanure, V. K."
+  role: "Zweitautorenschaft"
+  venue: "EAAMO"
+  year: "2026"
+  type: "Poster"
+
+- title: "Mapping Ethical Guidelines for AI in Healthcare: A Global Perspective"
+  authors: "Korukoglu, F. B., et al."
+  role: "Erstautorenschaft"
+  venue: "Studies in Health Technology and Informatics, IOS Press"
+  year: "2025"
+  type: "Peer-Review"
+  links:
+    - label: "PubMed"
+      url: "https://pubmed.ncbi.nlm.nih.gov/40380727/"
+
+- title: "Assessing Genomic Reproducibility of Read Alignment Tools"
+  authors: "Korukoglu, F. B., et al."
+  venue: "bioRxiv"
+  year: "2025"
+  type: "Preprint"
+  links:
+    - label: "bioRxiv"
+      url: "https://www.biorxiv.org/content/10.1101/2025.05.08.652934v1"
+
+- title: "Benchmarking machine learning algorithms for sepsis mortality prediction"
+  authors: "Chhugani, K. et al., Korukoglu, F. B."
+  venue: "RECOMB-seq"
+  year: "2024"
+  type: "Konferenz"
+
+- title: "DNA Methylation Analysis of Healthy and Cancerous Tissues"
+  authors: "Korukoglu, F. B. et al."
+  venue: "Bioinformatics & Computational Genomics Conference, Moldau"
+  year: "2023"
+  type: "Konferenz"
+
+- title: "Protein Profile of Brain Endothelial Cells"
+  authors: "Korukoglu, F. B. et al."
+  venue: "Sabancı University Program for Undergraduate Research"
+  year: "2021"
+  type: "Poster"

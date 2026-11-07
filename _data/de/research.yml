@@ -1,0 +1,52 @@
+# Deutsche Fassung von _data/research.yml. Fachbegriffe und Projektnamen, die
+# im Deutschen englisch gebräuchlich sind, bleiben stehen.
+- category: "Computergestützte Pathologie"
+  period: "seit 2026"
+  title: "Topology-Aware Graph-MIL"
+  visual: "graph"
+  image: "/images/research/thesis.png"
+  image_alt: >-
+    Ergebnisse im Vergleich: Modelle auf Basis der DNA-Methylierung gegenüber
+    H&E-Histopathologie-Ansätzen zur Vorhersage des BRAF-V600E-Mutationsstatus beim Melanom.
+    Die methylierungsbasierte Merkmalsauswahl erreicht eine AUROC von 0,784 auf Patientenebene.
+  image_caption: "Vorhersage des BRAF-V600E-Status beim Melanom: Die methylierungsbasierte Merkmalsauswahl erreicht eine AUROC von 0,784 auf Patientenebene und liegt damit vor den untersuchten H&E-Modellen."
+  body: >-
+    In meiner Masterarbeit entwickle und evaluiere ich graphbasierte Modelle des Multiple
+    Instance Learning, die mithilfe von Pathologie-Foundation-Models molekulare Eigenschaften
+    aus histopathologischen Bildern vorhersagen. Im Mittelpunkt stehen Robustheit und
+    Generalisierbarkeit.
+  methods:
+    - "Graph Neural Networks"
+    - "Multiple Instance Learning"
+    - "Pathologie-Foundation-Models"
+    - "Robustheit"
+  affiliations:
+    - name: "Computational Pathology & Machine Learning, Schüffler Lab"
+      url: "https://schuefflerlab.org/"
+    - name: "Lehrstuhl für Computational Biology, Universität des Saarlandes"
+      url: "https://www-cbi.cs.uni-saarland.de/"
+
+- category: "Computergestützte Sozialwissenschaft"
+  period: "seit 2026"
+  title: "Geodaten-Infrastruktur"
+  visual: "geo"
+  image: "/images/research/fc_away.png"
+  image_alt: >-
+    Diagramm zur Auslastung lokaler Gastronomie an Spielwochenenden des 1. FC Saarbrücken:
+    Sie steigt von 30,8 Prozent an Wochenenden ohne Spiel auf 48,3 Prozent an
+    Auswärtsspiel-Wochenenden.
+  image_caption: "Auslastung der Gastronomie an Spielwochenenden des 1. FC Saarbrücken: 48,3 % an Auswärtsspiel-Wochenenden gegenüber 30,8 % ohne Spiel."
+  body: >-
+    Am I2SC entwickle ich skalierbare Pipelines für Geodaten mit Python, FastAPI,
+    PostgreSQL/PostGIS und Redis/Celery, die Forschung zu über 300.000 Orten in mehr als 50
+    Regionen tragen. Durch optimierte asynchrone Verarbeitung und verteilte Workflows habe ich
+    die Verarbeitungszeit pro Datensatz um 35 % gesenkt und damit großskalige computergestützte
+    Sozialforschung deutlich beschleunigt.
+  methods:
+    - "Verteilte Pipelines"
+    - "Geodatenanalyse"
+    - "Asynchrone Workflows"
+    - "Priority Queueing"
+  affiliations:
+    - name: "Interdisciplinary Institute for Societal Computing (I2SC)"
+      url: "https://www.i2sc.net/"

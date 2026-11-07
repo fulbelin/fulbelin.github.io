@@ -1,0 +1,38 @@
+# Deutsche Fassung von _data/projects.yml. Projektnamen bleiben im Original.
+- title: "Saarbrucken Eats"
+  category: "Geodatenanalyse"
+  description: >-
+    Ein interaktives Dashboard aus SQL, Google-Maps-APIs und überlagerten Kartenebenen, mit dem
+    sich Restaurants rund um den Saarland Informatics Campus nach Küche, Bewertung und
+    Entfernung erkunden lassen.
+  tags: ["Python", "Flask", "SQL", "Leaflet"]
+  url: "https://github.com/fulbelin/is2c"
+  url_label: "Code"
+
+- title: "Scalable DNA-Seq Pipeline"
+  category: "Computergestützte Genomik"
+  description: >-
+    Automatisierte Auswertung von PacBio-Single-End-Sequenzierdaten mit BLEND und Snakemake,
+    ausgelegt auf reproduzierbares Benchmarking von Read-Alignment-Workflows.
+  tags: ["Snakemake", "BLEND", "Bash", "HPC"]
+  url: "https://github.com/fulbelin/Snakemake-workflow-dna-seq-short-read-blend-map"
+  url_label: "Code"
+
+- title: "Multimodal Cancer Diagnosis"
+  category: "Medizinische Bildgebung"
+  description: >-
+    Ein multimodales Deep-Learning-Modell auf PET-CT-Daten zur Vorhersage von
+    Lymphknotenmetastasen, mit 80 % Genauigkeit in der untersuchten Kohorte.
+  tags: ["PyTorch", "Multimodales Lernen", "Bildgebung"]
+  url: "https://github.com/fulbelin/PET_CT"
+  url_label: "Code"
+
+- title: "Global AI Ethics Atlas"
+  category: "KI-Governance"
+  description: >-
+    Eine Full-Stack-Plattform zum Erschließen und Vergleichen von 109 internationalen
+    Regulierungsrahmen und Ethikleitlinien für KI im Gesundheitswesen, entwickelt an der Emory
+    University.
+  tags: ["Next.js", "Prisma", "PostgreSQL"]
+  url: "https://pubmed.ncbi.nlm.nih.gov/40380727/"
+  url_label: "Publikation"

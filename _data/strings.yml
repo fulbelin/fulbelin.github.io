@@ -1,0 +1,53 @@
+# English interface text. The German counterpart is _data/de/strings.yml —
+# the two files must carry the same keys.
+site_title: "Belin Korukoglu – Bioinformatics & AI Research"
+site_description: "Master's student in Bioinformatics at Saarland University focusing on AI, ML, and scalable systems for healthcare and geospatial intelligence."
+
+skip_link: "Skip to content"
+nav_label: "Primary"
+nav_toggle: "Toggle navigation"
+cv_long: "Curriculum Vitae"
+cv_short: "CV"
+back_home: "← Back to home"
+
+language_label: "Language"
+language_en: "English"
+language_de: "German"
+
+sections:
+  research: "01 / Current Work"
+  publications: "02 / Publications"
+  experience: "03 / Research Experience"
+  projects: "04 / Selected Projects"
+  skills: "05 / Technical Toolkit"
+  community: "06 / AI Safety &amp; Community"
+  contact: "07 / Contact"
+
+carousel:
+  label: "Current work"
+  previous: "Previous project"
+  next: "Next project"
+  show: "Show"
+  status: "Card %n of %total"
+
+experience_tabs: "Research positions"
+
+community:
+  heading: "Reliability is a community problem."
+  body_1: >-
+    Alongside my technical research, I'm interested in the reliability, transparency and
+    societal implications of increasingly capable AI systems — the same questions that make
+    reproducibility and careful evaluation central to how I work.
+  body_2: >-
+    I previously led <strong>Marketing and Outreach</strong> at
+    <a href="https://www.ais-saarland.org/" rel="noopener">AI Safety Saarland (AISS)</a>, a
+    student-led initiative promoting safe, fair and beneficial AI development, where I built
+    the brand identity and coordinated interdisciplinary programmes and a mentorship network
+    at Saarland University.
+
+contact:
+  heading: "Let's connect."
+  body: >-
+    I'm always glad to hear about research collaborations, academic discussions and
+    interdisciplinary projects — in computational pathology, scientific AI, or anywhere the
+    two meet.
