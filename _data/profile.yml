@@ -4,14 +4,10 @@ short_name: "Belin Korukoglu"
 monogram: "Belin"
 subtitle: "Bioinformatics · Machine Learning · Scientific AI"
 intro: >-
-  Bioinformatician and machine learning researcher based in Germany. I build AI models for
-  biomedical research and large-scale data systems for studying society. Currently exploring
-  how AI agents can make scientific discoveries on their own, without forgetting what makes
-  science trustworthy.
-statement: >-
-  I'm interested in developing AI systems that accelerate scientific discovery through robust,
-  reproducible, and uncertainty-aware reasoning. My interests include reliable machine learning,
-  evidence-based decision-making, and autonomous scientific agents.
+  Bioinformatician and societal computing researcher based in Germany. I build AI models for
+  biomedical research and large-scale data systems for studying society.
+  
+  I'm interested in building reliable, autonomous AI systems that accelerate scientific discovery through evidence-driven reasoning and robust decision-making under uncertainty.
 portrait: "/images/profile_photo.png"
 location: "Saarbrücken, Germany"
 
