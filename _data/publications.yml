@@ -1,4 +1,12 @@
 # Verified against the CV page. Do not add entries without a source.
+- title: "VOYAGER: Probing Traveller Experience and Reported Discrimination in Google Maps Reviews of Global Airports"
+  authors: "Wiltzius, D., Korukoglu, F. B., Weber, I., & Cannanure, V. K."
+  role: "Second author"
+  venue: "EAAMO"
+  year: "2026"
+  type: "Poster"
+
+
 - title: "Mapping Ethical Guidelines for AI in Healthcare: A Global Perspective"
   authors: "Korukoglu, F. B., et al."
   role: "First author"
@@ -18,14 +26,20 @@
     - label: "bioRxiv"
       url: "https://www.biorxiv.org/content/10.1101/2025.05.08.652934v1"
 
+- title: "Benchmarking machine learning algorithms for sepsis mortality prediction"
+  authors: "Chhugani, K. et al., Korukoglu, F. B."
+  venue: "RECOMB-seq"
+  year: "2024"
+  type: "Conference"
+
 - title: "DNA Methylation Analysis of Healthy and Cancerous Tissues"
-  authors: "Korukoglu, F. B."
+  authors: "Korukoglu, F. B. et al."
   venue: "Bioinformatics & Computational Genomics Conference, Moldova"
   year: "2023"
   type: "Conference"
 
 - title: "Protein Profile of Brain Endothelial Cells"
-  authors: "Korukoglu, F. B."
+  authors: "Korukoglu, F. B. et al."
   venue: "Sabancı University Program for Undergraduate Research"
   year: "2021"
-  type: "Undergraduate research"
+  type: "Poster"
