@@ -1,13 +1,10 @@
 # Current research. Content drawn from the About text and the CV page only.
 - category: "Computational Pathology"
-  period: "2025 — Present"
+  period: "2026 — Present"
   title: "Topology-Aware Graph-MIL"
   visual: "graph"
   body: >-
-    For my Master's thesis, I investigate topology-aware graph-based multiple instance learning for
-    predicting molecular characteristics from histopathology images. I develop and evaluate graph
-    neural network architectures using pathology foundation-model representations, with an emphasis
-    on robustness and generalization.
+    For my Master's thesis, I develop and evaluate graph-based multiple instance learning models using pathology foundation models to predict molecular characteristics from histopathology images, focusing on robustness and generalization.
   methods:
     - "Graph Neural Networks"
     - "Multiple Instance Learning"
@@ -20,14 +17,11 @@
       url: "https://www-cbi.cs.uni-saarland.de/"
 
 - category: "Computational Social Science"
-  period: "2025 — Present"
+  period: "2026 — Present"
   title: "Geospatial Data Infrastructure"
   visual: "geo"
   body: >-
-    I develop scalable geospatial data infrastructure for computational social science, integrating
-    Google Maps data with other geographic sources. Using Python, FastAPI, PostgreSQL/PostGIS,
-    and Redis/Celery, I build distributed data pipelines, optimize asynchronous workflows, and
-    enable efficient analysis of hundreds of thousands of locations across multiple regions.
+    At I2SC, I develop scalable geospatial data pipelines using Python, FastAPI, PostgreSQL/PostGIS, and Redis/Celery, supporting research across **300,000+ locations in 50+ regions**. By optimizing asynchronous processing and distributed workflows, I reduced per-record processing time by **35%**, enabling faster and more efficient large-scale computational social science research.
   methods:
     - "Distributed Pipelines"
     - "Geospatial Analytics"
