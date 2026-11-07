@@ -707,6 +707,16 @@ hr {
 
 .panel__figure svg { width: 100%; height: auto; display: block; }
 
+/* a photograph or exported plot standing in for the drawn diagram */
+.panel__image {
+  width: 100%;
+  height: auto;
+  max-height: 22rem;
+  object-fit: contain;
+  display: block;
+  border-radius: var(--radius);
+}
+
 .panel__figcaption {
   font-family: var(--font-mono);
   font-size: 0.8rem;

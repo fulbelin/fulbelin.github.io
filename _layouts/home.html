@@ -59,12 +59,22 @@ layout: fbk
                   </div>
 
                   <figure class="panel__figure">
-                    {% if item.visual == 'graph' %}
+                    {%- comment -%}
+                      A real figure from the work when research.yml names one,
+                      the drawn diagram otherwise.
+                    {%- endcomment -%}
+                    {% if item.image %}
+                      <img class="panel__image"
+                           src="{{ item.image | relative_url }}"
+                           alt="{{ item.image_alt | default: item.title }}"
+                           loading="lazy"
+                           decoding="async">
+                    {% elsif item.visual == 'graph' %}
                       {% include fbk/figure-graph.html %}
                     {% else %}
                       {% include fbk/figure-geo.html %}
                     {% endif %}
-                    <figcaption class="panel__figcaption">{{ item.institution }}</figcaption>
+                    <figcaption class="panel__figcaption">{{ item.image_caption | default: item.institution }}</figcaption>
                   </figure>
                 </div>
 
