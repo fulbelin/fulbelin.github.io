@@ -54,7 +54,7 @@ Lehrveranstaltungen: Maschinelles Lernen, Neuronale Netze, Datennetze, Verarbeit
 
 **[Scalable DNA-Seq Pipeline](https://github.com/fulbelin/Snakemake-workflow-dna-seq-short-read-blend-map)**
 
-- Einen modularen **Snakemake-Workflow** entwickelt, der Vorverarbeitung und BLEND-basiertes Read-Alignment automatisiert — mit Abhängigkeitsverfolgung, reproduzierbarer Ausführung und parallelisierbaren Pipeline-Stufen.
+- Einen modularen **Snakemake-Workflow** entwickelt, der Vorverarbeitung und BLEND-basiertes Read-Alignment automatisiert mit Abhängigkeitsverfolgung, reproduzierbarer Ausführung und parallelisierbaren Pipeline-Stufen.
 
 ## Kenntnisse
 
