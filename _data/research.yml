@@ -2,7 +2,6 @@
 - category: "Computational Pathology"
   period: "2025 — Present"
   title: "Topology-Aware Graph-MIL"
-  tagline: "Graph-based deep learning for molecular prediction from histopathology images."
   institution: "Saarland University & Technical University of Munich"
   visual: "graph"
   body: >-
@@ -24,14 +23,13 @@
 - category: "Computational Social Science"
   period: "2025 — Present"
   title: "Geospatial Data Infrastructure"
-  tagline: "Scalable systems for large-scale societal research at I2SC."
   institution: "Interdisciplinary Institute for Societal Computing, Saarland University"
   visual: "geo"
   body: >-
-    I develop scalable geospatial data infrastructure for large-scale societal research, integrating
-    Google Maps data with complementary geographic sources. My work involves building distributed
-    data collection and processing pipelines, optimizing asynchronous workflows, and enabling
-    analyses of hundreds of thousands of places of interest across different regions.
+    I develop scalable geospatial data infrastructure for computational social science, integrating
+    Google Maps data with other geographic sources. Using Python, FastAPI, PostgreSQL/PostGIS,
+    and Redis/Celery, I build distributed data pipelines, optimize asynchronous workflows, and
+    enable efficient analysis of hundreds of thousands of locations across multiple regions.
   methods:
     - "Distributed Pipelines"
     - "Geospatial Analytics"
