@@ -120,6 +120,101 @@
   select(0, false);
 }());
 
+/* ------------------------------------------------ current-work carousel
+   Two cards, one in view. The chevrons, the dots, the arrow keys and a
+   drag all move between them. The track is a plain stack until this runs,
+   so the cards stay readable with scripting off.                        */
+(function () {
+  'use strict';
+
+  var root = document.querySelector('[data-carousel]');
+  if (!root) { return; }
+
+  var track = root.querySelector('[data-carousel-track]');
+  var slides = Array.prototype.slice.call(root.querySelectorAll('.carousel__slide'));
+  var dots = Array.prototype.slice.call(root.querySelectorAll('.carousel__dot'));
+  var status = root.querySelector('[data-carousel-status]');
+  var prev = root.querySelector('[data-carousel-prev]');
+  var next = root.querySelector('[data-carousel-next]');
+
+  if (!track || slides.length < 2) { return; }
+
+  var index = 0;
+  var count = slides.length;
+
+  function render(announce) {
+    track.style.transform = 'translateX(' + (-index * 100) + '%)';
+
+    slides.forEach(function (slide, i) {
+      var active = i === index;
+      slide.setAttribute('data-active', String(active));
+      slide.setAttribute('aria-hidden', String(!active));
+      // keeps links in the hidden card out of the tab order
+      if ('inert' in slide) { slide.inert = !active; }
+    });
+
+    dots.forEach(function (dot, i) {
+      dot.setAttribute('aria-current', String(i === index));
+    });
+
+    if (announce && status) {
+      status.textContent = 'Card ' + (index + 1) + ' of ' + count + ': '
+        + slides[index].querySelector('.panel__title').textContent.trim();
+    }
+  }
+
+  function go(to, announce) {
+    index = (to + count) % count;   // wraps, so neither chevron is ever dead
+    render(announce);
+  }
+
+  if (prev) { prev.addEventListener('click', function () { go(index - 1, true); }); }
+  if (next) { next.addEventListener('click', function () { go(index + 1, true); }); }
+
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { go(i, true); });
+  });
+
+  root.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowLeft') { event.preventDefault(); go(index - 1, true); }
+    if (event.key === 'ArrowRight') { event.preventDefault(); go(index + 1, true); }
+  });
+
+  /* drag / swipe — pointer events cover mouse, pen and touch alike */
+  var startX = null;
+  var startY = null;
+  var dragging = false;
+
+  track.addEventListener('pointerdown', function (event) {
+    if (event.button !== undefined && event.button !== 0) { return; }
+    startX = event.clientX;
+    startY = event.clientY;
+    dragging = true;
+  });
+
+  track.addEventListener('pointerup', function (event) {
+    if (!dragging || startX === null) { return; }
+    dragging = false;
+
+    var dx = event.clientX - startX;
+    var dy = event.clientY - startY;
+    startX = null;
+
+    // horizontal intent only, so a vertical scroll never flips the card
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+      go(index + (dx < 0 ? 1 : -1), true);
+    }
+  });
+
+  track.addEventListener('pointercancel', function () {
+    dragging = false;
+    startX = null;
+  });
+
+  root.setAttribute('data-ready', 'true');
+  render(false);
+}());
+
 /* ------------------------------------------------- portrait simulation
    The photograph is sampled into a field of particles. Each one is held
    to its pixel by a spring, drifts slightly, and scatters away from the

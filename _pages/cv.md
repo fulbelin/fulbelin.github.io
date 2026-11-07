@@ -8,7 +8,7 @@ redirect_from:
   - /resume
 ---
 
-Saarbrücken, Germany · [fulbelin.korukoglu@gmail.com](mailto:fulbelin.korukoglu@gmail.com) · [LinkedIn](https://www.linkedin.com/in/belin-korukoglu) · [GitHub](https://github.com/fulbelin) · [Google Scholar](https://scholar.google.com/citations?user=Hdj-VHIAAAAJ&hl=en)
+Saarbrucken, Germany · [fulbelin.korukoglu@gmail.com](mailto:fulbelin.korukoglu@gmail.com) · [LinkedIn](https://www.linkedin.com/in/belin-korukoglu) · [GitHub](https://github.com/fulbelin) · [Google Scholar](https://scholar.google.com/citations?user=Hdj-VHIAAAAJ&hl=en)
 
 ## Education
 
@@ -47,7 +47,7 @@ Coursework: Machine Learning, Neural Networks, Data Networks, Biological Data Pr
 - Benchmarked graph and attention-based architectures using **5-fold site-blocked cross-validation**, multi-seed experiments, and corrected statistical testing to evaluate robustness under distribution shift.
 - Engineered a reproducible **terabyte-scale ML pipeline** for image tiling, GPU-based feature extraction, graph construction, caching, and distributed HPC experimentation.
 
-**[Saarbrücken Geospatial Analytics Platform](https://github.com/fulbelin/is2c)**
+**[Saarbrucken Geospatial Analytics Platform](https://github.com/fulbelin/is2c)**
 
 - Built an interactive geospatial analytics platform with **database-backed querying, PostGIS spatial indexing, cached routing, and SQL-driven visualizations** for large-scale venue data.
 

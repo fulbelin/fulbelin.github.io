@@ -9,50 +9,93 @@ layout: fbk
 <section class="section" id="research" aria-labelledby="research-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="research-title">01 / Featured Research</span>
+      <span class="section-head__label" id="research-title">01 / Current Work</span>
       <span class="section-head__rule"></span>
     </div>
 
-    <div class="research">
-      {% for item in site.data.research %}
-        <article class="panel reveal">
-          <div class="panel__top">
-            <span class="mono-label">{{ item.category }}</span>
-            <span class="panel__period">{{ item.period }}</span>
-          </div>
+    <!-- One card at a time: arrows, dots and swipe move between them.
+         Without JS the track stays a plain stack, so both are readable. -->
+    <div class="carousel reveal"
+         data-carousel
+         role="group"
+         aria-roledescription="carousel"
+         aria-label="Current work">
 
-          <h3 class="panel__title">{{ item.title }}</h3>
-          <p class="panel__tagline">{{ item.tagline }}</p>
+      <div class="carousel__frame">
+        <button class="carousel__nav carousel__nav--prev" type="button" data-carousel-prev
+                aria-label="Previous project">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M14.5 5 7.5 12l7 7" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
 
-          <div class="panel__body">
-            <div class="panel__text">
-              <p>{{ item.body }}</p>
-              {% if item.affiliations %}
-                <p class="panel__links">
-                  {% for aff in item.affiliations %}
-                    <a class="link-arrow" href="{{ aff.url }}" rel="noopener">{{ aff.name }}</a>
+        <div class="carousel__viewport">
+          <div class="carousel__track" data-carousel-track>
+            {% for item in site.data.research %}
+              <article class="panel carousel__slide"
+                       role="group"
+                       aria-roledescription="slide"
+                       aria-label="{{ forloop.index }} of {{ forloop.length }} — {{ item.title }}"
+                       data-active="{% if forloop.first %}true{% else %}false{% endif %}">
+                <div class="panel__top">
+                  <span class="mono-label">{{ item.category }}</span>
+                  <span class="panel__period">{{ item.period }}</span>
+                </div>
+
+                <h3 class="panel__title">{{ item.title }}</h3>
+                <p class="panel__tagline">{{ item.tagline }}</p>
+
+                <div class="panel__body">
+                  <div class="panel__text">
+                    <p>{{ item.body }}</p>
+                    {% if item.affiliations %}
+                      <p class="panel__links">
+                        {% for aff in item.affiliations %}
+                          <a class="link-arrow" href="{{ aff.url }}" rel="noopener">{{ aff.name }}</a>
+                        {% endfor %}
+                      </p>
+                    {% endif %}
+                  </div>
+
+                  <figure class="panel__figure">
+                    {% if item.visual == 'graph' %}
+                      {% include fbk/figure-graph.html %}
+                    {% else %}
+                      {% include fbk/figure-geo.html %}
+                    {% endif %}
+                    <figcaption class="panel__figcaption">{{ item.institution }}</figcaption>
+                  </figure>
+                </div>
+
+                <ul class="tags">
+                  {% for method in item.methods %}
+                    <li class="tag">{{ method }}</li>
                   {% endfor %}
-                </p>
-              {% endif %}
-            </div>
-
-            <figure class="panel__figure">
-              {% if item.visual == 'graph' %}
-                {% include fbk/figure-graph.html %}
-              {% else %}
-                {% include fbk/figure-geo.html %}
-              {% endif %}
-              <figcaption class="panel__figcaption">{{ item.institution }}</figcaption>
-            </figure>
-          </div>
-
-          <ul class="tags">
-            {% for method in item.methods %}
-              <li class="tag">{{ method }}</li>
+                </ul>
+              </article>
             {% endfor %}
-          </ul>
-        </article>
-      {% endfor %}
+          </div>
+        </div>
+
+        <button class="carousel__nav carousel__nav--next" type="button" data-carousel-next
+                aria-label="Next project">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M9.5 5l7 7-7 7" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="carousel__dots" data-carousel-dots>
+        {% for item in site.data.research %}
+          <button class="carousel__dot" type="button"
+                  aria-label="Show {{ item.title }}"
+                  aria-current="{% if forloop.first %}true{% else %}false{% endif %}"></button>
+        {% endfor %}
+      </div>
+
+      <p class="visually-hidden" aria-live="polite" data-carousel-status></p>
     </div>
   </div>
 </section>
@@ -61,7 +104,7 @@ layout: fbk
 <section class="section" id="publications" aria-labelledby="publications-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="publications-title">03 / Publications</span>
+      <span class="section-head__label" id="publications-title">02 / Publications</span>
       <span class="section-head__rule"></span>
     </div>
 
@@ -98,7 +141,7 @@ layout: fbk
 <section class="section" id="experience" aria-labelledby="experience-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="experience-title">04 / Research Experience</span>
+      <span class="section-head__label" id="experience-title">03 / Research Experience</span>
       <span class="section-head__rule"></span>
     </div>
 
@@ -143,7 +186,7 @@ layout: fbk
 <section class="section" id="projects" aria-labelledby="projects-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="projects-title">05 / Selected Projects</span>
+      <span class="section-head__label" id="projects-title">04 / Selected Projects</span>
       <span class="section-head__rule"></span>
     </div>
 
@@ -175,7 +218,7 @@ layout: fbk
 <section class="section" id="skills" aria-labelledby="skills-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="skills-title">06 / Technical Toolkit</span>
+      <span class="section-head__label" id="skills-title">05 / Technical Toolkit</span>
       <span class="section-head__rule"></span>
     </div>
 
@@ -198,7 +241,7 @@ layout: fbk
 <section class="section" id="community" aria-labelledby="community-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="community-title">07 / AI Safety &amp; Community</span>
+      <span class="section-head__label" id="community-title">06 / AI Safety &amp; Community</span>
       <span class="section-head__rule"></span>
     </div>
 
@@ -227,7 +270,7 @@ layout: fbk
 <section class="section" id="contact" aria-labelledby="contact-title">
   <div class="wrap contact reveal">
     <div class="section-head">
-      <span class="section-head__label" id="contact-title">08 / Contact</span>
+      <span class="section-head__label" id="contact-title">07 / Contact</span>
       <span class="section-head__rule"></span>
     </div>
 

@@ -9,7 +9,7 @@ intro: >-
 
  I'm interested in advancing scientific discovery through reliable, autonomous AI systems capable of evidence-driven reasoning and decision-making under uncertainty.
 portrait: "/images/profile_photo.png"
-location: "Saarbrücken, Germany"
+location: "Saarbrucken, Germany"
 
 links:
   - label: "GitHub"
@@ -32,8 +32,6 @@ links:
     icon: "cv"
 
 nav:
-  - title: "About"
-    anchor: "#about"
   - title: "Research"
     anchor: "#research"
   - title: "Publications"
