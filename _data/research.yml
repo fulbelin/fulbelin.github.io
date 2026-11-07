@@ -5,9 +5,9 @@
   visual: "graph"
   # A figure from the work replaces the drawn diagram above. Drop the file in
   # images/research/ and uncomment these three lines:
-  image: "/images/research/graph-mil.jpg"
-  image_alt: "Test alt text."
-  image_caption: "Test caption."
+  image: "/images/research/thesis.jpg"
+  # image_alt: "Describe what the figure shows, in a sentence."
+  image_caption: "Comparing DNA methylation-based models and H&E histopathology approaches for predicting BRAF V600E mutation status in melanoma. Methylation-based feature selection achieved a patient-level AUROC of 0.784, outperforming the evaluated H&E-based models."
   body: >-
     For my Master's thesis, I develop and evaluate graph-based multiple instance learning models using pathology foundation models to predict molecular characteristics from histopathology images, focusing on robustness and generalization.
   methods:
@@ -25,8 +25,13 @@
   period: "2026 — Present"
   title: "Geospatial Data Infrastructure"
   visual: "geo"
+    # A figure from the work replaces the drawn diagram above. Drop the file in
+  # images/research/ and uncomment these three lines:
+  image: "/images/research/fc_away.jpg"
+  # image_alt: "Describe what the figure shows, in a sentence."
+  image_caption: "Analyzing the relationship between 1. FC Saarbrücken match weekends and local restaurant occupancy using large-scale geospatial data. Average occupancy increased from 30.8% on non-game weekends to 48.3% on away-game weekends."
   body: >-
-    At I2SC, I develop scalable geospatial data pipelines using Python, FastAPI, PostgreSQL/PostGIS, and Redis/Celery, supporting research across 300,000+ locations in 50+ regions**. By optimizing asynchronous processing and distributed workflows, I reduced per-record processing time by 35%, enabling faster and more efficient large-scale computational social science research.
+    At I2SC, I develop scalable geospatial data pipelines using Python, FastAPI, PostgreSQL/PostGIS, and Redis/Celery, supporting research across 300,000+ locations in 50+ regions. By optimizing asynchronous processing and distributed workflows, I reduced per-record processing time by 35%, enabling faster and more efficient large-scale computational social science research.
   methods:
     - "Distributed Pipelines"
     - "Geospatial Analytics"

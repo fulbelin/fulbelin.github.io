@@ -44,7 +44,7 @@ layout: fbk
                 </div>
 
                 <h3 class="panel__title">{{ item.title }}</h3>
-                <p class="panel__tagline">{{ item.tagline }}</p>
+                {% if item.tagline %}<p class="panel__tagline">{{ item.tagline }}</p>{% endif %}
 
                 <div class="panel__body">
                   <div class="panel__text">
@@ -74,7 +74,8 @@ layout: fbk
                     {% else %}
                       {% include fbk/figure-geo.html %}
                     {% endif %}
-                    <figcaption class="panel__figcaption">{{ item.image_caption | default: item.institution }}</figcaption>
+                    {% assign caption = item.image_caption | default: item.institution %}
+                    {% if caption %}<figcaption class="panel__figcaption">{{ caption }}</figcaption>{% endif %}
                   </figure>
                 </div>
 
