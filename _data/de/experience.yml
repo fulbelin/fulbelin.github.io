@@ -23,7 +23,7 @@
 
 - id: "eth"
   role: "Benchmark zur Reproduzierbarkeit in der Genomik"
-  institution: "ETH Zürich"
-  short: "ETH Zürich"
+  institution: "ETH Zurich"
+  short: "ETH Zurich"
   points:
     - "Die Reproduzierbarkeit genomischer Read-Alignment-Werkzeuge untersucht und automatisierte bioinformatische Workflows mit Snakemake für systematisches Benchmarking und reproduzierbare Analysen entwickelt."
