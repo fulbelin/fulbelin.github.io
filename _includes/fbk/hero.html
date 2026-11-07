@@ -2,10 +2,7 @@
 <section class="hero">
   <div class="wrap hero__grid">
     <div class="hero__text">
-      <p class="hero__eyebrow mono-label">Saarland University · I2SC</p>
-
       <h1 class="hero__name">{{ profile.name }}</h1>
-      <p class="hero__subtitle">{{ profile.subtitle }}</p>
 
       {%- comment -%}
         The research statement is not repeated here: it is the first section of the
@@ -25,8 +22,15 @@
       </ul>
     </div>
 
-    <div class="hero__visual" aria-hidden="true">
-      {% include fbk/hero-graph.html %}
+    <div class="hero__visual">
+      <canvas class="simulation-container"
+              data-sim="portrait"
+              data-src="{{ profile.portrait }}"
+              width="640" height="640"
+              role="img" aria-label="Portrait of {{ profile.name }}"></canvas>
+      <noscript>
+        <img src="{{ profile.portrait }}" alt="Portrait of {{ profile.name }}" width="640" height="640">
+      </noscript>
     </div>
   </div>
 </section>

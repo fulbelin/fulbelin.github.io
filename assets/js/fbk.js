@@ -119,3 +119,193 @@
 
   select(0, false);
 }());
+
+/* ------------------------------------------------- portrait simulation
+   The photograph is sampled into a field of particles. Each one is held
+   to its pixel by a spring, drifts slightly, and scatters away from the
+   pointer before easing back. Decorative enhancement only: the canvas
+   carries role="img" with a label, and a plain <img> stands in without
+   scripting.                                                            */
+(function () {
+  'use strict';
+
+  var canvas = document.querySelector('[data-sim="portrait"]');
+  if (!canvas || !canvas.getContext) { return; }
+
+  var ctx = canvas.getContext('2d');
+  var W = canvas.width;
+  var H = canvas.height;
+
+  // derived from the backing size so the grain stays the same at any scale
+  var STEP = Math.max(4, Math.round(W / 73));   // sampling grid, in canvas pixels
+  var DOT = W / 129;                            // particle size
+  var SPRING = 0.055;                           // pull back to the sampled pixel
+  var DAMPING = 0.88;
+  var POINTER_R = W * 0.177;                    // scatter radius
+  var POINTER_F = W / 169;                      // scatter strength
+
+  var IVORY = '244, 241, 232';
+  var SAGE = '167, 197, 163';
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var particles = [];
+  var buckets = [];
+
+  var image = new Image();
+  image.onload = build;
+  image.onerror = function () { canvas.style.display = 'none'; };
+  image.src = canvas.getAttribute('data-src');
+
+  function build() {
+    var off = document.createElement('canvas');
+    off.width = W;
+    off.height = H;
+    var octx = off.getContext('2d');
+
+    // cover-fit the photograph into the square canvas
+    var scale = Math.max(W / image.width, H / image.height);
+    var dw = image.width * scale;
+    var dh = image.height * scale;
+    octx.drawImage(image, (W - dw) / 2, (H - dh) / 2, dw, dh);
+
+    var data;
+    try {
+      data = octx.getImageData(0, 0, W, H).data;
+    } catch (e) {
+      canvas.style.display = 'none';
+      return;
+    }
+
+    for (var y = 0; y < H; y += STEP) {
+      for (var x = 0; x < W; x += STEP) {
+        var idx = (y * W + x) * 4;
+        var alpha = data[idx + 3];
+        if (alpha < 24) { continue; }
+
+        var lum = (data[idx] * 0.299 + data[idx + 1] * 0.587 + data[idx + 2] * 0.114) / 255;
+        var strength = Math.pow(lum, 1.15) * (alpha / 255);
+        if (strength < 0.1) { continue; }
+
+        particles.push({
+          hx: x, hy: y,
+          x: x, y: y,
+          vx: 0, vy: 0,
+          a: strength,
+          sage: strength > 0.78 && Math.random() < 0.14
+        });
+      }
+    }
+
+    // group by opacity so a frame costs a handful of state changes
+    for (var b = 0; b < 5; b++) { buckets.push([]); }
+    particles.forEach(function (p) {
+      var slot = Math.min(4, Math.floor(p.a * 5));
+      buckets[slot].push(p);
+    });
+
+    draw();
+    if (reduceMotion) { return; }
+    observe();
+  }
+
+  var pointer = { x: -9999, y: -9999, on: false };
+
+  function trackPointer(event) {
+    var rect = canvas.getBoundingClientRect();
+    pointer.x = (event.clientX - rect.left) * (W / rect.width);
+    pointer.y = (event.clientY - rect.top) * (H / rect.height);
+    pointer.on = true;
+  }
+
+  function dropPointer() {
+    pointer.on = false;
+    pointer.x = pointer.y = -9999;
+  }
+
+  canvas.addEventListener('pointermove', trackPointer);
+  canvas.addEventListener('pointerdown', trackPointer);
+  canvas.addEventListener('pointerleave', dropPointer);
+  canvas.addEventListener('pointercancel', dropPointer);
+
+  function step() {
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+
+      if (pointer.on) {
+        var dx = p.x - pointer.x;
+        var dy = p.y - pointer.y;
+        var d2 = dx * dx + dy * dy;
+        if (d2 < POINTER_R * POINTER_R && d2 > 0.5) {
+          var d = Math.sqrt(d2);
+          var push = (1 - d / POINTER_R) * POINTER_F;
+          p.vx += (dx / d) * push;
+          p.vy += (dy / d) * push;
+        }
+      }
+
+      p.vx += (p.hx - p.x) * SPRING;
+      p.vy += (p.hy - p.y) * SPRING;
+      p.vx *= DAMPING;
+      p.vy *= DAMPING;
+      p.x += p.vx;
+      p.y += p.vy;
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    for (var b = 0; b < buckets.length; b++) {
+      var list = buckets[b];
+      if (!list.length) { continue; }
+      var alpha = ((b + 0.5) / buckets.length).toFixed(2);
+      ctx.fillStyle = 'rgba(' + IVORY + ',' + alpha + ')';
+      for (var i = 0; i < list.length; i++) {
+        var p = list[i];
+        if (p.sage) { continue; }
+        ctx.fillRect(p.x - DOT / 2, p.y - DOT / 2, DOT, DOT);
+      }
+      ctx.fillStyle = 'rgba(' + SAGE + ',' + alpha + ')';
+      for (var j = 0; j < list.length; j++) {
+        var q = list[j];
+        if (!q.sage) { continue; }
+        ctx.fillRect(q.x - DOT / 2, q.y - DOT / 2, DOT, DOT);
+      }
+    }
+  }
+
+  var running = false;
+  var frame = null;
+
+  function loop() {
+    step();
+    draw();
+    frame = window.requestAnimationFrame(loop);
+  }
+
+  function start() {
+    if (running) { return; }
+    running = true;
+    loop();
+  }
+
+  function stop() {
+    running = false;
+    if (frame) { window.cancelAnimationFrame(frame); frame = null; }
+  }
+
+  function observe() {
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { start(); } else { stop(); }
+        });
+      }, { threshold: 0.05 }).observe(canvas);
+    } else {
+      start();
+    }
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) { stop(); } else { start(); }
+    });
+  }
+}());

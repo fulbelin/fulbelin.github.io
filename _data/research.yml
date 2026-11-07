@@ -6,10 +6,10 @@
   institution: "Saarland University & Technical University of Munich"
   visual: "graph"
   body: >-
-    For my Master's thesis I investigate topology-aware graph-based multiple instance learning for
+    For my Master's thesis, I investigate topology-aware graph-based multiple instance learning for
     predicting molecular characteristics from histopathology images. I develop and evaluate graph
-    neural network architectures built on pathology foundation-model representations, with an
-    emphasis on robustness and generalization.
+    neural network architectures using pathology foundation-model representations, with an emphasis
+    on robustness and generalization.
   methods:
     - "Graph Neural Networks"
     - "Multiple Instance Learning"
@@ -29,9 +29,9 @@
   visual: "geo"
   body: >-
     I develop scalable geospatial data infrastructure for large-scale societal research, integrating
-    Google Maps data with complementary geographic sources. The work involves distributed data
-    collection and processing pipelines, asynchronous workflows, and analyses of hundreds of
-    thousands of places of interest across different regions.
+    Google Maps data with complementary geographic sources. My work involves building distributed
+    data collection and processing pipelines, optimizing asynchronous workflows, and enabling
+    analyses of hundreds of thousands of places of interest across different regions.
   methods:
     - "Distributed Pipelines"
     - "Geospatial Analytics"

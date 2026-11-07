@@ -1,11 +1,13 @@
 # Identity and links used by the redesigned layout.
 name: "Ful Belin Korukoglu"
 short_name: "Belin Korukoglu"
-monogram: "FBK."
+monogram: "Belin"
 subtitle: "Bioinformatics · Machine Learning · Scientific AI"
 intro: >-
-  I'm a Master's student in Bioinformatics at Saarland University and a Research Assistant
-  at the Interdisciplinary Institute for Societal Computing (I2SC).
+  Bioinformatician and machine learning researcher based in Germany. I build AI models for
+  biomedical research and large-scale data systems for studying society. Currently exploring
+  how AI agents can make scientific discoveries on their own, without forgetting what makes
+  science trustworthy.
 statement: >-
   I'm interested in developing AI systems that accelerate scientific discovery through robust,
   reproducible, and uncertainty-aware reasoning. My interests include reliable machine learning,

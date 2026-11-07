@@ -9,7 +9,7 @@ layout: fbk
 <section class="section" id="about" aria-labelledby="about-title">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-head__label" id="about-title">01 / About</span>
+      <span class="section-head__label" id="about-title">01 / Research Interests</span>
       <span class="section-head__rule"></span>
     </div>
 
@@ -19,27 +19,8 @@ layout: fbk
       </div>
 
       <aside class="about__aside reveal">
-        <figure class="portrait">
-          <img src="{{ profile.portrait }}" alt="Portrait of {{ profile.name }}" width="480" height="480" loading="lazy">
-        </figure>
-
-        <div class="facts">
-          <div>
-            <p class="fact__label">Currently</p>
-            <p class="fact__value">Research Assistant, I2SC<span>Saarland University</span></p>
-          </div>
-          <div>
-            <p class="fact__label">Studying</p>
-            <p class="fact__value">M.Sc. Bioinformatics<span>Saarland University</span></p>
-          </div>
-          <div>
-            <p class="fact__label">Thesis</p>
-            <p class="fact__value">Graph-based deep learning<span>Computational pathology</span></p>
-          </div>
-          <div>
-            <p class="fact__label">Based in</p>
-            <p class="fact__value">{{ profile.location }}</p>
-          </div>
+        <div class="aside-sim" aria-hidden="true">
+          {% include fbk/hero-graph.html %}
         </div>
       </aside>
     </div>
@@ -166,7 +147,7 @@ layout: fbk
                tabindex="0">
             <h3 class="xp__role">{{ role.role }}</h3>
             <p class="xp__institution">{{ role.institution }}</p>
-            <p class="xp__dates">{{ role.dates }}</p>
+            {% if role.dates %}<p class="xp__dates">{{ role.dates }}</p>{% endif %}
             <ul class="xp__points">
               {% for point in role.points %}
                 <li>{{ point }}</li>
@@ -177,15 +158,6 @@ layout: fbk
       </div>
     </div>
 
-    <div class="edu reveal">
-      {% for item in site.data.education %}
-        <div class="edu__item">
-          <p class="edu__degree">{{ item.degree }}</p>
-          <p class="edu__meta">{{ item.institution }} — {{ item.note }}</p>
-          <p class="edu__dates">{{ item.dates }}</p>
-        </div>
-      {% endfor %}
-    </div>
   </div>
 </section>
 

@@ -1,59 +1,28 @@
-# Roles, institutions and dates exactly as listed on the CV page.
-- id: "i2sc"
-  role: "Research Assistant"
-  institution: "I2SC — Saarland University"
-  short: "I2SC"
-  dates: "May 2025 — Present"
-  current: true
+# Section 04 — selected previous work, in the wording from the About text.
+- id: "harvard"
+  role: "Medical Imaging Reconstruction"
+  institution: "Harvard Medical School"
+  short: "Harvard"
   points:
-    - "Building a scalable geo-intelligence application that turns user-uploaded shapefiles into structured data from the Google Maps API and complementary sources."
-    - "Delivering location-specific insights — live traffic, visit trends, reviews — through integrated data pipelines."
-    - "Improved high-volume data handling by implementing a priority queue system."
-
-- id: "thesis"
-  role: "Master's Thesis Researcher"
-  institution: "Schüffler Lab, TUM & Chair of Computational Biology, Saarland University"
-  short: "Thesis"
-  dates: "2025 — Present"
-  current: true
-  points:
-    - "Topology-aware graph-based multiple instance learning for molecular prediction from histopathology images."
-    - "Graph neural network architectures over pathology foundation-model representations."
-    - "Evaluation centred on robustness and generalization."
-
-- id: "emory"
-  role: "Full-stack Data Scientist"
-  institution: "Bozkurt Lab — Emory University"
-  short: "Emory"
-  dates: "Jun 2024 — Oct 2024"
-  points:
-    - "Led the development of an interactive global map for medical AI ethics, defining UX and core features with researchers."
-    - "Designed a Next.js and Prisma application visualising 109 global AI ethics policies."
-    - "Deployed on Vercel PostgreSQL with automated pipelines for updates."
+    - "Implemented and evaluated deep learning pipelines for MRI reconstruction across multiple imaging datasets and undersampling conditions, automating model inference and reconstruction-quality evaluation."
 
 - id: "usc"
-  role: "Undergraduate Research Assistant"
-  institution: "Mangul Lab — University of Southern California"
+  role: "Sepsis Mortality Prediction"
+  institution: "University of Southern California"
   short: "USC"
-  dates: "Aug 2023 — Apr 2024"
   points:
-    - "Benchmarked classical and deep learning models for sepsis mortality prediction."
-    - "Studied cross-cohort generalization, feature importance and the reproducibility of predictive biological signals."
+    - "Benchmarked classical and deep learning models for sepsis mortality prediction across 16 independent transcriptomic cohorts, investigating cross-cohort generalization, feature importance, and reproducibility of predictive biological signals."
 
-- id: "harvard"
-  role: "Undergraduate Research Assistant"
-  institution: "BRAIN Lab — Harvard Medical School"
-  short: "Harvard"
-  dates: "Jun 2023 — Oct 2023"
+- id: "emory"
+  role: "Global AI Ethics Atlas"
+  institution: "Emory University"
+  short: "Emory"
   points:
-    - "Strengthened MRI reconstruction pipelines with a Snopy and TensorFlow integration, improving speed by about 20%."
-    - "Established reproducible pre- and post-processing workflows across imaging datasets."
+    - "Developed a full-stack healthcare AI governance platform for organizing and comparing international regulatory frameworks and ethical guidelines. This research contributed to my first-author publication, <em>Mapping Ethical Guidelines for AI in Healthcare: A Global Perspective</em> (2025)."
 
 - id: "eth"
-  role: "Undergraduate Research Assistant"
+  role: "Genomic Reproducibility Benchmark"
   institution: "ETH Zürich"
   short: "ETH Zürich"
-  dates: "Feb 2022 — Aug 2023"
   points:
-    - "Automated preprocessing for more than 300 sequencing samples, cutting preprocessing time by 20%."
-    - "Benchmarked five or more genomics tools and proposed workflow optimisations."
+    - "Investigated the reproducibility of genomic read alignment tools and developed automated bioinformatics workflows using Snakemake for systematic benchmarking and reproducible analysis."
